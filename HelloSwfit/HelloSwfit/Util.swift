@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+/**
+ *
+ *常用工具类
+ */
 class Util {
     
       /**
