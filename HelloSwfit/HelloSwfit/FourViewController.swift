@@ -26,10 +26,11 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         self.tb_wexin.dataSource = self
         self.tb_wexin.delegate = self
         self._title.text = "微信新闻"
-        
         // 为按钮添加事件
         self.lab_back.addTarget(self, action:#selector(ViewController.OnClickBtn(_:)), forControlEvents: UIControlEvents.TouchDown)
     }
+    
+    
     
     func initData() {
     
@@ -38,7 +39,7 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         let  url = "http://v.juhe.cn/weixin/query"
         
         let  params = ["key":"f16af393a63364b729fd81ed9fdd4b7d",
-                       "pno":pno,"ps":"10"]
+                       "pno":pno,"ps":"50"]
         
         _sessionManager.POST(url,parameters:params,
                             success: { (
@@ -117,22 +118,30 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         /**
          *  初始化URL并且获取图片地址
          */
-//        let url : NSURL = NSURL(string:items[indexPath.row].firstImg!)!
-//        /**
-//         *  初始化data。从URL中获取数据
-//         */
-//        let data : NSData = NSData(contentsOfURL:url)!
-//        /**
-//         *  创建图片
-//         */
-//        let image = UIImage(data:data)
-//        
-//        //添加照片
-//        cell!.imageView?.image = image
-//        cell!.imageView!.layer.cornerRadius = 10
-//        cell!.imageView!.layer.masksToBounds = true
-//        let frame = CGRect(x: 20, y: 20, width: 40, height: 40)
-//        cell!.imageView!.frame = frame
+       let s =  items[indexPath.row].firstImg!
+//        print("s = \(s)")
+        if !s.isEmpty {
+            let url : NSURL = NSURL(string: s)!
+            /**
+             *  初始化data。从URL中获取数据
+             */
+            let data : NSData = NSData(contentsOfURL:url)!
+            /**
+             *  创建图片
+             */
+            let image = UIImage(data:data)
+            
+            //添加照片
+            cell!.imageView!.layer.masksToBounds = true
+            cell!.imageView!.layer.cornerRadius = 5
+            cell!.imageView!.layer.borderWidth = 2
+            cell!.imageView?.image = image
+//            let frame = CGRect(x: 20, y: 20, width: 40, height: 40)
+//            cell!.imageView!.frame = frame
+            cell!.imageView!.contentMode = .ScaleAspectFill
+        }
+        
+        
 
         return cell!
     }
@@ -141,7 +150,7 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     var title1:String = String()
     //选中那个
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(items[indexPath.row].url!)
+//        print("0000== \(items[indexPath.row].firstImg!)")
         url = items[indexPath.row].url!
         title1 = items[indexPath.row].title!
         self.performSegueWithIdentifier("four_segue", sender: self)

@@ -55,8 +55,8 @@
                   symbolName = "HelloSwfit.SecondViewController.__deallocating_deinit"
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/HelloSwfit/HelloSwfit/SecondViewController.swift"
-                  timestampString = "484978950.899992"
+                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/SecondViewController.swift"
+                  timestampString = "485359128.718187"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -67,11 +67,26 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "HelloSwfit.SecondViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; HelloSwfit.SecondViewController"
+                  moduleName = "HelloSwfit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/SecondViewController.swift"
+                  timestampString = "485359128.718292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
                   symbolName = "HelloSwfit.SecondViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;HelloSwfit.SecondViewController&gt;"
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/HelloSwfit/HelloSwfit/SecondViewController.swift"
-                  timestampString = "484978950.900443"
+                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/SecondViewController.swift"
+                  timestampString = "485359128.718378"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -151,8 +166,8 @@
                   symbolName = "HelloSwfit.ThridViewController.(initData () -&gt; ()).(closure #1)"
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/HelloSwfit/HelloSwfit/ThridViewController.swift"
-                  timestampString = "484978950.904741"
+                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/ThridViewController.swift"
+                  timestampString = "485359128.720741"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -166,8 +181,8 @@
                   symbolName = "HelloSwfit.ThridViewController.(initData () -&gt; ()).(closure #1)"
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/HelloSwfit/HelloSwfit/ThridViewController.swift"
-                  timestampString = "484978950.904862"
+                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/ThridViewController.swift"
+                  timestampString = "485359128.720833"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -264,11 +279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloSwfit/FourViewController.swift"
-            timestampString = "484918059.755128"
+            timestampString = "485183937.482776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "initData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +295,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloSwfit/FourViewController.swift"
-            timestampString = "484918059.755128"
+            timestampString = "485183937.482776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "initData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +311,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloSwfit/FourViewController.swift"
-            timestampString = "484972515.320231"
+            timestampString = "485183937.482776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -318,6 +333,102 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwfit/FourViewController.swift"
+            timestampString = "485273040.976775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwfit/Refresh/RefreshFooterView.swift"
+            timestampString = "485354531.810204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "adjustFrameWithContentSize()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwfit/Refresh/RefreshFooterView.swift"
+            timestampString = "485354533.299851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "adjustFrameWithContentSize()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwfit/Refresh/RefreshHeaderView.swift"
+            timestampString = "485354553.3241"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(frame:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwfit/Refresh/RefreshHeaderView.swift"
+            timestampString = "485354621.14226"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "RefreshHeaderView"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloSwfit/Refresh/RefreshFooterView.swift"
+            timestampString = "485354692.065086"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "adjustStateWithContentOffset()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

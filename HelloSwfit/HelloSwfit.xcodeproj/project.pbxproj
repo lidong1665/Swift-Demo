@@ -42,6 +42,7 @@
 		DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8BDC51CE81A0400D382C4 /* UIVIewViewController.swift */; };
 		DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8BDC81CE8297300D382C4 /* Util.swift */; };
 		DDA8BDCF1CE8388100D382C4 /* btn_back_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA8BDCE1CE8388100D382C4 /* btn_back_bg.png */; };
+		DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */; };
 		DDD1A7AF1CE17B5A009055A7 /* ThridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */; };
 		DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		DDA8BDC51CE81A0400D382C4 /* UIVIewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVIewViewController.swift; sourceTree = "<group>"; };
 		DDA8BDC81CE8297300D382C4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		DDA8BDCE1CE8388100D382C4 /* btn_back_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_bg.png; sourceTree = "<group>"; };
+		DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNetWorkingUtil.swift; sourceTree = "<group>"; };
 		DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridViewController.swift; sourceTree = "<group>"; };
 		DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,18 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		DD799BF21CEDEADE00A814E3 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				DD0110FB1CE74C150020148B /* ic_home_white_24dp.png */,
+				DD0110F91CE74C080020148B /* ic_find_replace_white_24dp.png */,
+				DD0110F71CE74B6C0020148B /* ic_favorite_white_24dp.png */,
+				DD0110F51CE74B230020148B /* ic_book_white_24dp.png */,
+				DDA8BDCE1CE8388100D382C4 /* btn_back_bg.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		DD8ECD3B1CDF74D200710CA3 = {
 			isa = PBXGroup;
 			children = (
@@ -187,13 +201,9 @@
 		DD8ECD461CDF74D200710CA3 /* HelloSwfit */ = {
 			isa = PBXGroup;
 			children = (
-				DDA8BDCE1CE8388100D382C4 /* btn_back_bg.png */,
+				DD799BF21CEDEADE00A814E3 /* image */,
 				DDA8BDC71CE8293500D382C4 /* Util */,
 				DDA8BDC41CE819C400D382C4 /* UI */,
-				DD0110FB1CE74C150020148B /* ic_home_white_24dp.png */,
-				DD0110F91CE74C080020148B /* ic_find_replace_white_24dp.png */,
-				DD0110F71CE74B6C0020148B /* ic_favorite_white_24dp.png */,
-				DD0110F51CE74B230020148B /* ic_book_white_24dp.png */,
 				DD4CC9A11CE3572100E2E97B /* Model */,
 				DDA23F921CE31C9C001203BA /* UIKit+AFNetworking */,
 				DDA23F7E1CE31C5E001203BA /* AFNetworking */,
@@ -289,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA8BDC81CE8297300D382C4 /* Util.swift */,
+				DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -443,6 +454,7 @@
 				DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */,
 				DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */,
 				DDA23FAB1CE31C9C001203BA /* UIButton+AFNetworking.m in Sources */,
+				DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */,
 				DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */,
 				DDA23FAA1CE31C9C001203BA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */,
