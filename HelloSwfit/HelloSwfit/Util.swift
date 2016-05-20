@@ -22,7 +22,13 @@ class Util {
         print("\(desc) = \(message)")
      }
     
+    static   func log(desc:String,message:Int){
+        print("\(desc) = \(message)")
+    }
     
+    /**
+    *
+    */
     static func openNewViewController(dec:String,vc:UIViewController){
         
         let myStoryBoard = vc.storyboard

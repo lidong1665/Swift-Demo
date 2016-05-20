@@ -10,7 +10,9 @@ import UIKit
 
 class ThridViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
+    @IBOutlet weak var ll_title: UILabel!
     
+    @IBOutlet weak var btn_back: UIButton!
     @IBOutlet weak var tb_data_list: UITableView!
     
     var items:Array = [String]()
@@ -21,8 +23,12 @@ class ThridViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         let item = UIBarButtonItem(title: "返回", style: .Plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
-        
+        self.ll_title.text = "周公解梦类型"
+        // 为按钮添加事件
+        self.btn_back.addTarget(self, action:#selector(ViewController.OnClickBtn(_:)), forControlEvents: UIControlEvents.TouchDown)
+       
         initData()
+        
         tb_data_list.dataSource = self
         tb_data_list.delegate = self
     }
@@ -135,6 +141,16 @@ class ThridViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
         print("点击了  \(items[indexPath.row])")
+        
+    }
+    
+    
+    
+    /**
+     *按钮的事件处理
+     */
+    func OnClickBtn(btn_sunbmit: UIButton) {
+        self.dismissViewControllerAnimated(true,completion: nil)
         
     }
 

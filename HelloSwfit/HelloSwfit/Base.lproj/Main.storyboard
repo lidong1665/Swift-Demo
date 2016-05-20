@@ -23,16 +23,10 @@
                                     <rect key="frame" x="230" y="79" width="51" height="31"/>
                                 </variation>
                             </switch>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JMK-pG-06Y">
-                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="526" width="20" height="20"/>
-                                </variation>
-                            </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NFz-4F-DJg">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="472" width="240" height="128"/>
+                                    <rect key="frame" x="27" y="312" width="240" height="128"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhF-4F-yqN">
@@ -78,28 +72,34 @@
                                     <rect key="frame" x="27" y="130" width="312" height="30"/>
                                 </variation>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JMK-pG-06Y">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="285" y="360" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="JMK-pG-06Y"/>
                                 <exclude reference="NFz-4F-DJg"/>
                                 <exclude reference="EhF-4F-yqN"/>
                                 <exclude reference="6hu-TD-JWh"/>
                                 <exclude reference="cbn-WD-moQ"/>
                                 <exclude reference="8fY-Ms-Tty"/>
                                 <exclude reference="6mX-2P-cq6"/>
+                                <exclude reference="JMK-pG-06Y"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="JMK-pG-06Y"/>
                                 <include reference="NFz-4F-DJg"/>
                                 <include reference="EhF-4F-yqN"/>
                                 <include reference="6hu-TD-JWh"/>
                                 <include reference="cbn-WD-moQ"/>
                                 <include reference="8fY-Ms-Tty"/>
                                 <include reference="6mX-2P-cq6"/>
+                                <include reference="JMK-pG-06Y"/>
                             </mask>
                         </variation>
                     </view>
@@ -138,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FuH-ou-x4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1129" y="-624"/>
+            <point key="canvasLocation" x="-1425" y="-732"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="PdF-ne-Y8t">
@@ -225,34 +225,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-Zf-Sfm">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="156" y="18" width="106" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-2V-3WJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="btn_back_bg"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="18" width="50" height="30"/>
+                                </variation>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-Pl-clT">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="54" width="400" height="556"/>
+                                    <rect key="frame" x="0.0" y="56" width="400" height="556"/>
                                 </variation>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="nMI-Zf-Sfm"/>
+                                <exclude reference="cPo-2V-3WJ"/>
                                 <exclude reference="fWd-Pl-clT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="nMI-Zf-Sfm"/>
+                                <include reference="cPo-2V-3WJ"/>
                                 <include reference="fWd-Pl-clT"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btn_back" destination="cPo-2V-3WJ" id="UJO-yY-6sq"/>
+                        <outlet property="ll_title" destination="nMI-Zf-Sfm" id="g3G-nq-QaU"/>
                         <outlet property="tb_data_list" destination="fWd-Pl-clT" id="aBl-aC-Zo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23C-vf-BiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670.5" y="2030"/>
+            <point key="canvasLocation" x="666" y="1990"/>
         </scene>
         <!--Four View Controller-->
         <scene sceneID="vd2-IA-yOW">
@@ -277,16 +299,16 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="返回"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="12" y="14" width="30" height="30"/>
+                                    <rect key="frame" x="12" y="20" width="30" height="30"/>
                                 </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信新闻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMb-1R-Qcn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prE-cG-vNY">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="161" y="18" width="78" height="21"/>
+                                    <rect key="frame" x="135" y="24" width="131" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -295,27 +317,27 @@
                             <mask key="subviews">
                                 <exclude reference="27B-As-ver"/>
                                 <exclude reference="tU3-s0-cYy"/>
-                                <exclude reference="sMb-1R-Qcn"/>
+                                <exclude reference="prE-cG-vNY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="27B-As-ver"/>
                                 <include reference="tU3-s0-cYy"/>
-                                <include reference="sMb-1R-Qcn"/>
+                                <include reference="prE-cG-vNY"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="_title" destination="sMb-1R-Qcn" id="xZF-0v-vPT"/>
                         <outlet property="lab_back" destination="tU3-s0-cYy" id="AyB-af-GkF"/>
+                        <outlet property="lb_title" destination="prE-cG-vNY" id="YNX-5v-lFJ"/>
                         <outlet property="tb_wexin" destination="27B-As-ver" id="NOH-Md-8Xl"/>
                         <segue destination="btU-BD-JQw" kind="modal" identifier="four_segue" id="5Ky-6v-Qud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbX-w5-PHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-815" y="844"/>
+            <point key="canvasLocation" x="-816" y="844"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="k0v-gU-TKU">
@@ -378,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7T-Sf-ka3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352" y="852"/>
+            <point key="canvasLocation" x="-100.5" y="1080"/>
         </scene>
         <!--综合-->
         <scene sceneID="eqL-MG-Leh">
@@ -399,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRb-aF-Nn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-821" y="139"/>
+            <point key="canvasLocation" x="-1362" y="63"/>
         </scene>
         <!--UI-->
         <scene sceneID="XlR-hl-Mfi">
@@ -484,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ev2-bE-glm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266" y="134"/>
+            <point key="canvasLocation" x="-2232" y="126"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="cMb-9o-4bj">
@@ -556,6 +578,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_back_bg" width="56" height="40"/>
         <image name="btn_back_bg.png" width="56" height="40"/>
         <image name="ic_book_white_24dp.png" width="48" height="48"/>
         <image name="ic_favorite_white_24dp.png" width="48" height="48"/>

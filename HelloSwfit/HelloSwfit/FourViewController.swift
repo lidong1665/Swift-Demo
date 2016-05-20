@@ -10,36 +10,58 @@ import UIKit
 
 class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-    @IBOutlet weak var _title: UILabel!
+    @IBOutlet weak var lb_title: UILabel!
     @IBOutlet weak var lab_back: UIButton!
     @IBOutlet weak var tb_wexin: UITableView!
-    var pno:Int = 0
+    var pno:Int = 1
     var lable:UILabel!
     
-    var items:Array<WeiXinMessage> = Array<WeiXinMessage>()
+    var items:Array<WeiXinMessage> = []
 
+    let cellId = "DemoListID"
+    
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    // 底部刷新
+    let footer = MJRefreshAutoNormalFooter()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        initData()
-        
+//        headerRefresh()
+        initData(1)
         self.tb_wexin.dataSource = self
         self.tb_wexin.delegate = self
-        self._title.text = "微信新闻"
+        self.items  = Array<WeiXinMessage>()
+        self.lb_title.text = "微信新闻"
+        let nib = UINib(nibName: "WinXinTableViewCell", bundle: nil) //nibName指的是我们创建的Cell文件名
+        self.tb_wexin.registerNib(nib, forCellReuseIdentifier: cellId)
         // 为按钮添加事件
         self.lab_back.addTarget(self, action:#selector(ViewController.OnClickBtn(_:)), forControlEvents: UIControlEvents.TouchDown)
+        
+        // 下拉刷新
+        header.setRefreshingTarget(self, refreshingAction: #selector(FourViewController.headerRefresh))
+        // 现在的版本要用mj_header
+        self.tb_wexin.mj_header = header
+        
+        // 上拉刷新
+        footer.setRefreshingTarget(self, refreshingAction: #selector(FourViewController.footerRefresh))
+        self.tb_wexin.mj_footer = footer
+        
     }
     
     
-    
-    func initData() {
+     /**
+     *加载数据
+     */
+    func initData(page:Int){
     
         let _sessionManager = AFHTTPSessionManager()
         
         let  url = "http://v.juhe.cn/weixin/query"
         
         let  params = ["key":"f16af393a63364b729fd81ed9fdd4b7d",
-                       "pno":pno,"ps":"50"]
+                       "pno":page,"ps":"5"]
         
         _sessionManager.POST(url,parameters:params,
                             success: { (
@@ -54,6 +76,10 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
                         winXinlist.totalPage = Int(resultList["totalPage"]!.integerValue)
                         winXinlist.pno = Int(resultList["pno"]!.integerValue)
                         winXinlist.ps = Int(resultList["ps"]!.integerValue)
+                       
+                        if page == 1{
+                            self.items.removeAll()
+                                        }
                         if let ll = resultList["list"] as? Array<AnyObject>{
                         // print(index)
                           for index in ll as! [[String: AnyObject]] {
@@ -68,17 +94,23 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
                             self.items.append(weixinMessage)
                             
                         }
+                            if self.items.count != 0 {
                             self.tb_wexin.reloadData()
+                            }
                         }
+                                        
+                        }else{
+                        
+                        self.footer.endRefreshingWithNoMoreData()
                         }
                         }else{
                         print("服务器失败了啊")
                         }
                         
-                                }else{
-                                        print("没有数据")
+                        }else{
+                           print("没有数据")
                                         
-                                    }
+                        }
                             
                                 
                                 
@@ -86,13 +118,17 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
                 
                 print("错误\(error)  ------  \(operation)")
         })
+        
+//        Util.log("数据结果", message: arrs.count)
+//        
+//        return nil
 
     }
     
     
     //每一块有多少行
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return self.items.count
     }
     // //绘制cell
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -101,49 +137,40 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     
     //每个cell的高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70
+        return 80
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let initIdentifier = "Cell"
-        var cell = tb_wexin.dequeueReusableCellWithIdentifier(initIdentifier)
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: initIdentifier)
+
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellId, forIndexPath: indexPath) as! WinXinTableViewCell
+        
+        if (cell.isEqual(nil)) {
+            cell = WinXinTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellId)
         }
-        
-        //下面两个属性对应subtitle
-        cell!.textLabel?.text = items[indexPath.row].title!
-        cell!.detailTextLabel?.text = items[indexPath.row].source!
-        
-        /**
-         *  初始化URL并且获取图片地址
-         */
-       let s =  items[indexPath.row].firstImg!
-//        print("s = \(s)")
-        if !s.isEmpty {
-            let url : NSURL = NSURL(string: s)!
-            /**
-             *  初始化data。从URL中获取数据
-             */
-            let data : NSData = NSData(contentsOfURL:url)!
-            /**
-             *  创建图片
-             */
-            let image = UIImage(data:data)
-            
-            //添加照片
-            cell!.imageView!.layer.masksToBounds = true
-            cell!.imageView!.layer.cornerRadius = 5
-            cell!.imageView!.layer.borderWidth = 2
-            cell!.imageView?.image = image
-//            let frame = CGRect(x: 20, y: 20, width: 40, height: 40)
-//            cell!.imageView!.frame = frame
-            cell!.imageView!.contentMode = .ScaleAspectFill
-        }
-        
+        let win:WeiXinMessage = self.items[indexPath.row]
+            //下面两个属性对应subtitle
+            if win.id != nil  {
+                
+                cell.lb_message.text = self.items[indexPath.row].title!
+                cell.lb_source.text = "来源: \(self.items[indexPath.row].source!)"
+                
+                /**
+                 *  初始化URL并且获取图片地址
+                 */
+                let s =  self.items[indexPath.row].firstImg!
+                
+                //添加照片
+                cell.img_icon!.layer.masksToBounds = true
+                cell.img_icon!.layer.cornerRadius = 5
+                cell.img_icon!.layer.borderWidth = 1
+                cell.img_icon!.layer.borderColor = UIColor.greenColor().CGColor
+                cell.img_icon!.contentMode = .ScaleAspectFit
+                cell.img_icon!.sd_setImageWithURL(NSURL(string: s),placeholderImage: UIImage(named: "icon_app.png"))
+                
+            }
         
 
-        return cell!
+        return cell
     }
     
     var url:String = String()
@@ -182,5 +209,29 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     func OnClickBtn(btn_sunbmit: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true,completion: nil)
     }
+    
+    
+    // 顶部刷新
+    func headerRefresh(){
+        pno = 1
+        print("下拉刷新")
+        // 结束刷新
+        initData(pno)
+        self.tb_wexin.mj_header.endRefreshing()
+    }
+    
+    // 底部刷新
+    var index = 0
+    
+    func footerRefresh(){
+       
+        print("上拉刷新")
+        self.tb_wexin.mj_footer.endRefreshing()
+        // 2次后模拟没有更多数据
+        pno += 1
+        initData(pno)
+        Util.log("底部刷新", message: pno)
+    }
+
     
 }
