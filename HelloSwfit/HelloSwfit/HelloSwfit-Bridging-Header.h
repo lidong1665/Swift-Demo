@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking/AFNetworking.h"
-#import "UIKit+AFNetworking/UIImage+AFNetworking.h"
 #import "SDWebImage/SDWebImageManager.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "MJRefresh/MJRefresh.h"
+#import "YYKit/YYKit.h"
 @interface HelloSwfit_Bridging_Header : NSObject
 
 @end
