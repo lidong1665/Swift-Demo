@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var btn_back: UIButton!
         //跳转第三个页面
     @IBOutlet weak var nv_item: UINavigationItem!
     @IBOutlet weak var btn_four: UIButton!
@@ -82,6 +83,7 @@ class ViewController: UIViewController {
         self.btn_third.addTarget(self, action:#selector(ViewController.OnClickBtnThrid(_:)), forControlEvents: UIControlEvents.TouchDown)
         //为按钮添加事件
         self.btn_four.addTarget(self, action:#selector(ViewController.OnClickBtnFour(_:)), forControlEvents: UIControlEvents.TouchDown)
+        self.btn_back.addTarget(self, action:#selector(ViewController.OnClickBtnBack(_:)), forControlEvents: UIControlEvents.TouchDown)
         //为开关添加事件
         switch_sex.addTarget(self, action: #selector(ViewController.changeSwtich(_:)),
                              forControlEvents: UIControlEvents.ValueChanged)
@@ -191,8 +193,6 @@ class ViewController: UIViewController {
    *按钮的事件处理
    */
     func OnClickBtn(btn_sunbmit: UIButton) {
-        btn_sunbmit.setTitle("nihao", forState: (.Normal))
-        btn_sunbmit.setTitleColor(UIColor.blueColor(), forState: (.Normal))
         var s:Int
            s = self.add(12, j: 32, k: 232)
         self.lb_text.text = String(s)
@@ -203,6 +203,13 @@ class ViewController: UIViewController {
         self.openNewViewController("Main", dec: "Second")
         
     
+    }
+    
+    /**
+     *按钮的事件处理
+     */
+    func OnClickBtnBack(btn_sunbmit: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     /**
     *
