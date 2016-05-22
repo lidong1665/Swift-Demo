@@ -15,6 +15,7 @@ class SQLiteViewController: UIViewController {
 
     @IBOutlet weak var btn_submit: UIButton!
     @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var select: UIButton!
     @IBOutlet weak var name: UITextField!
     var dbManager : DBManager = DBManager.sharedInstance
     
@@ -45,17 +46,33 @@ class SQLiteViewController: UIViewController {
         
         self.btn_submit.backgroundColor = UIColor.blueColor()
         
+        self.btn_submit.addTarget(self, action:#selector( SQLiteViewController.selectAllEmp(_:)), forControlEvents: .TouchUpInside)
+        
+
         
     }
     
     func submitAge(btn:UIButton)  {
         
+        if self.name.text == nil || self.age.text == nil {
+            Util.showToast(self, message: "输入框不能为空")
+            return
+        }
+       
+        let sql = "insert into T_Employee values（'\(self.name.text)','\(self.age.text)'）"
+        let items =  dbManager.execSql(sql)
+        Util.showToast(self, message: "插入 = \(items)")
+    }
+
+    
+    func selectAllEmp(btn:UIButton)  {
         let sql = "select * from T_Employee"
         let items =  dbManager.selectAll(sql)
         for item in items {
             Util.showToast(self, message: item.toString())
         }
-    
+       
+        
     }
 
 

@@ -137,8 +137,10 @@ class ViewController: UIViewController {
     func changeSwtich(swith:UISwitch) {
         if swith.on {
            print("open")
+           Util.showToast(self, message: "Open")
         }else{
            print("closeed")
+            Util.showToast(self, message: "closeed")
         }
     }
     

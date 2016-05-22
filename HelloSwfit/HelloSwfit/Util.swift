@@ -38,7 +38,6 @@ class Util {
     *显示Toast
     */
     static func showToast(vc:UIViewController,message:String){
-    
         vc.view.makeToast(message)
     }
 

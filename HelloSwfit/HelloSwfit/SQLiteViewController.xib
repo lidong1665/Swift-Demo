@@ -10,6 +10,7 @@
                 <outlet property="age" destination="7vo-L7-tRj" id="fJi-pK-oQi"/>
                 <outlet property="btn_submit" destination="ZVc-Ip-Pyh" id="ks2-XU-lE6"/>
                 <outlet property="name" destination="eu9-3G-byM" id="NDh-WF-OHf"/>
+                <outlet property="select" destination="uUu-CW-Quz" id="pjz-E9-CQJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-L7-tRj">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-L7-tRj">
                     <rect key="frame" x="134" y="19" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -26,7 +27,7 @@
                         <rect key="frame" x="35" y="122" width="120" height="30"/>
                     </variation>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-3G-byM">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-3G-byM">
                     <rect key="frame" x="24" y="19" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -34,12 +35,19 @@
                         <rect key="frame" x="35" y="84" width="268" height="30"/>
                     </variation>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVc-Ip-Pyh">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVc-Ip-Pyh">
                     <rect key="frame" x="256" y="19" width="30" height="30"/>
                     <color key="backgroundColor" red="0.15512597659355143" green="1" blue="0.296487250210413" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="提交"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="35" y="169" width="86" height="30"/>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUu-CW-Quz">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="查询"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="162" y="169" width="30" height="30"/>
                     </variation>
                 </button>
             </subviews>
@@ -49,6 +57,7 @@
                     <exclude reference="7vo-L7-tRj"/>
                     <exclude reference="eu9-3G-byM"/>
                     <exclude reference="ZVc-Ip-Pyh"/>
+                    <exclude reference="uUu-CW-Quz"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -56,6 +65,7 @@
                     <include reference="7vo-L7-tRj"/>
                     <include reference="eu9-3G-byM"/>
                     <include reference="ZVc-Ip-Pyh"/>
+                    <include reference="uUu-CW-Quz"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="213" y="225"/>
