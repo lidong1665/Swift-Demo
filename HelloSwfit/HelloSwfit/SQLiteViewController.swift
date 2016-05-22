@@ -51,7 +51,10 @@ class SQLiteViewController: UIViewController {
     func submitAge(btn:UIButton)  {
         
         let sql = "select * from T_Employee"
-        let oo1 =  dbManager.selectAll(sql)
+        let items =  dbManager.selectAll(sql)
+        for item in items {
+            Util.showToast(self, message: item.toString())
+        }
     
     }
 

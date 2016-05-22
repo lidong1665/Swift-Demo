@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 /**
  *
  *常用工具类
@@ -14,10 +15,8 @@ import UIKit
 class Util {
     
       /**
-         *
-         *页面跳转
-         *
-         */
+      *  log打印
+      */
      static   func log(desc:String,message:String){
         print("\(desc) = \(message)")
      }
@@ -27,13 +26,20 @@ class Util {
     }
     
     /**
-    *
+    *打开新的页面
     */
     static func openNewViewController(dec:String,vc:UIViewController){
         
         let myStoryBoard = vc.storyboard
         let anotherView:UIViewController = (myStoryBoard?.instantiateViewControllerWithIdentifier(dec))!
         vc.presentViewController(anotherView, animated: true, completion: nil)
+    }
+    /**
+    *显示Toast
+    */
+    static func showToast(vc:UIViewController,message:String){
+    
+        vc.view.makeToast(message)
     }
 
 }

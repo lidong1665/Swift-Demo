@@ -49,7 +49,7 @@ class UIBUttonViewController: UIViewController {
         self.view.addSubview(btn3)
         
         //UILable 的学习
-        let rect = CGRectMake(20, 440, 280, 80)
+        let rect = CGRectMake(20, 280, 280, 80)
         
         let lable = UILabel(frame: rect)
         lable.text = "Hello Lable"
