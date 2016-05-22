@@ -59,7 +59,7 @@
                 <outlet property="lb_message" destination="2j8-dD-e5B" id="YdI-SF-IJk"/>
                 <outlet property="lb_source" destination="ud8-e5-oEm" id="bsz-6v-jFL"/>
             </connections>
-            <point key="canvasLocation" x="328" y="289"/>
+            <point key="canvasLocation" x="199" y="210"/>
         </tableViewCell>
     </objects>
 </document>

@@ -37,9 +37,17 @@ class UIVIewViewController: UIViewController {
             Util.openNewViewController("Main", vc: self)
             break
         case 2:
+            let ve = UIBUttonViewController()
+            
+            self.navigationController?.pushViewController(ve, animated: true)
              print("21")
             break
         case 3:
+            
+            let ve = SQLiteViewController()
+            
+            self.navigationController?.pushViewController(ve, animated: true)
+            print("21")
              print("31")
             break
         case 4:

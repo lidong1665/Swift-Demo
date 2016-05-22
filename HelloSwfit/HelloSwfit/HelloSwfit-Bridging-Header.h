@@ -11,7 +11,7 @@
 #import "SDWebImage/SDWebImageManager.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "MJRefresh/MJRefresh.h"
-
+#import "SQLite3.h"
 @interface HelloSwfit_Bridging_Header : NSObject
 
 @end

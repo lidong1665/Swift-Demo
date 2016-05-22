@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5846947DE67872CD189B8AB1 /* Pods_HelloSwfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4393C4BB8B28DAEBD7A5AA /* Pods_HelloSwfit.framework */; };
+		5846947DE67872CD189B8AB1 /* Pods_HelloSwfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4393C4BB8B28DAEBD7A5AA /* Pods_HelloSwfit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		DD0110EE1CE6BDE40020148B /* WinXinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110ED1CE6BDE40020148B /* WinXinResponse.swift */; };
 		DD0110F01CE6C8320020148B /* WeiXinMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110EF1CE6C8320020148B /* WeiXinMessage.swift */; };
 		DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110F11CE6D84C0020148B /* WebViewController.swift */; };
@@ -19,11 +19,17 @@
 		DD8ECD4F1CDF74D200710CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8ECD4E1CDF74D200710CA3 /* Assets.xcassets */; };
 		DD8ECD5D1CDF74D200710CA3 /* HelloSwfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD5C1CDF74D200710CA3 /* HelloSwfitTests.swift */; };
 		DD8ECD681CDF74D200710CA3 /* HelloSwfitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD671CDF74D200710CA3 /* HelloSwfitUITests.swift */; };
+		DD90480C1CF051C100F44EE8 /* UIBUttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD90480B1CF051C100F44EE8 /* UIBUttonViewController.swift */; };
 		DDA23FB11CE32E43001203BA /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23FB01CE32E43001203BA /* ResponseData.swift */; };
 		DDA23FB31CE32E9F001203BA /* DreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23FB21CE32E9F001203BA /* DreamModel.swift */; };
 		DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8BDC51CE81A0400D382C4 /* UIVIewViewController.swift */; };
 		DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA8BDC81CE8297300D382C4 /* Util.swift */; };
 		DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */; };
+		DDBE3F641CF13FE3007A8E70 /* SQLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE3F621CF13FE3007A8E70 /* SQLiteViewController.swift */; };
+		DDBE3F651CF13FE3007A8E70 /* SQLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBE3F631CF13FE3007A8E70 /* SQLiteViewController.xib */; };
+		DDBE3F671CF1438B007A8E70 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE3F661CF1438B007A8E70 /* DBManager.swift */; };
+		DDBE3F771CF163E3007A8E70 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBE3F761CF163E3007A8E70 /* libsqlite3.0.tbd */; };
+		DDBE3F811CF19C96007A8E70 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE3F801CF19C96007A8E70 /* Employee.swift */; };
 		DDD1A7AF1CE17B5A009055A7 /* ThridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */; };
 		DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */; };
 		DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */; };
@@ -68,12 +74,19 @@
 		DD8ECD631CDF74D200710CA3 /* HelloSwfitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloSwfitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8ECD671CDF74D200710CA3 /* HelloSwfitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwfitUITests.swift; sourceTree = "<group>"; };
 		DD8ECD691CDF74D200710CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD90480B1CF051C100F44EE8 /* UIBUttonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBUttonViewController.swift; sourceTree = "<group>"; };
 		DDA23F6E1CE30A0B001203BA /* HelloSwfit-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloSwfit-Bridging-Header.h"; sourceTree = "<group>"; };
 		DDA23FB01CE32E43001203BA /* ResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		DDA23FB21CE32E9F001203BA /* DreamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamModel.swift; sourceTree = "<group>"; };
 		DDA8BDC51CE81A0400D382C4 /* UIVIewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVIewViewController.swift; sourceTree = "<group>"; };
 		DDA8BDC81CE8297300D382C4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNetWorkingUtil.swift; sourceTree = "<group>"; };
+		DDBE3F621CF13FE3007A8E70 /* SQLiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteViewController.swift; sourceTree = "<group>"; };
+		DDBE3F631CF13FE3007A8E70 /* SQLiteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQLiteViewController.xib; sourceTree = "<group>"; };
+		DDBE3F661CF1438B007A8E70 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		DDBE3F761CF163E3007A8E70 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DDBE3F7A1CF16854007A8E70 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = "../../../Library/Developer/Xcode/DerivedData/HelloSwfit-ekghrcfzqfzisnezkyrvbwogazxf/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework"; sourceTree = "<group>"; };
+		DDBE3F801CF19C96007A8E70 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridViewController.swift; sourceTree = "<group>"; };
 		DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinXinTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBE3F771CF163E3007A8E70 /* libsqlite3.0.tbd in Frameworks */,
 				5846947DE67872CD189B8AB1 /* Pods_HelloSwfit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +132,8 @@
 		BAD02A270BA73FCDEED26641 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDBE3F7A1CF16854007A8E70 /* SQLite.framework */,
+				DDBE3F761CF163E3007A8E70 /* libsqlite3.0.tbd */,
 				2C4393C4BB8B28DAEBD7A5AA /* Pods_HelloSwfit.framework */,
 			);
 			name = Frameworks;
@@ -159,6 +175,7 @@
 		DD8ECD461CDF74D200710CA3 /* HelloSwfit */ = {
 			isa = PBXGroup;
 			children = (
+				DDBE3F611CF13FB2007A8E70 /* Improve */,
 				DDA8BDC71CE8293500D382C4 /* Util */,
 				DDA8BDC41CE819C400D382C4 /* UI */,
 				DD4CC9A11CE3572100E2E97B /* Model */,
@@ -201,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA8BDC51CE81A0400D382C4 /* UIVIewViewController.swift */,
+				DD90480B1CF051C100F44EE8 /* UIBUttonViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -212,6 +230,17 @@
 				DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		DDBE3F611CF13FB2007A8E70 /* Improve */ = {
+			isa = PBXGroup;
+			children = (
+				DDBE3F621CF13FE3007A8E70 /* SQLiteViewController.swift */,
+				DDBE3F631CF13FE3007A8E70 /* SQLiteViewController.xib */,
+				DDBE3F661CF1438B007A8E70 /* DBManager.swift */,
+				DDBE3F801CF19C96007A8E70 /* Employee.swift */,
+			);
+			name = Improve;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +353,7 @@
 			files = (
 				DDF8C4C11CEE943F00B0BC9E /* WinXinTableViewCell.xib in Resources */,
 				DD8ECD4F1CDF74D200710CA3 /* Assets.xcassets in Resources */,
+				DDBE3F651CF13FE3007A8E70 /* SQLiteViewController.xib in Resources */,
 				DD8ECD4D1CDF74D200710CA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,17 +427,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD90480C1CF051C100F44EE8 /* UIBUttonViewController.swift in Sources */,
 				DD0110F41CE721700020148B /* MainViewController.swift in Sources */,
 				DDA23FB31CE32E9F001203BA /* DreamModel.swift in Sources */,
 				DDA23FB11CE32E43001203BA /* ResponseData.swift in Sources */,
 				DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */,
 				DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */,
 				DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */,
+				DDBE3F811CF19C96007A8E70 /* Employee.swift in Sources */,
+				DDBE3F641CF13FE3007A8E70 /* SQLiteViewController.swift in Sources */,
 				DD0110EE1CE6BDE40020148B /* WinXinResponse.swift in Sources */,
 				DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */,
 				DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */,
 				DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */,
 				DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */,
+				DDBE3F671CF1438B007A8E70 /* DBManager.swift in Sources */,
 				DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */,
 				DD0110F01CE6C8320020148B /* WeiXinMessage.swift in Sources */,
 				DDD1A7AF1CE17B5A009055A7 /* ThridViewController.swift in Sources */,
