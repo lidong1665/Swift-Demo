@@ -13,24 +13,30 @@ enum TKRequestMethod: String{
     case POST = "POST"
 }
 
-/**
- *基础URL
- */
+/// 基础URL
 let BASE_URL = "http://192.168.1.124:8080"
-
+/// AFHTTPSessionManager
 let _sessionManager = AFHTTPSessionManager()
 
-/**
- *对AFNetworking的封装
- */
+/// 对AFNetworking的封装
+
 class AFNetWorkingUtil: NSObject {
-    
+    /**
+     获取baseUrl
+     
+     - parameter baseUrl: <#baseUrl description#>
+     
+     - returns: <#return value description#>
+     */
     static func getBaseUrl(baseUrl:String) ->String{
     
         return BASE_URL
     }
     /**
-     *post请求
+     post请求
+     
+     - parameter action: <#action description#>
+     - parameter params: <#params description#>
      */
     static func post(action:String,params:Dictionary<String,String>){
     
@@ -41,8 +47,11 @@ class AFNetWorkingUtil: NSObject {
         }
     }
     /**
-    *get请求
-    */
+    get请求
+     
+     - parameter action: <#action description#>
+     - parameter params: <#params description#>
+     */
     static func get(action:String,params:Dictionary<String,String>){
         _sessionManager.GET(getBaseUrl(BASE_URL+action), parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
             print(responseObj)

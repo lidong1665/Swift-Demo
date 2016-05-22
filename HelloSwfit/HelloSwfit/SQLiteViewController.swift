@@ -46,7 +46,7 @@ class SQLiteViewController: UIViewController {
         
         self.btn_submit.backgroundColor = UIColor.blueColor()
         
-        self.btn_submit.addTarget(self, action:#selector( SQLiteViewController.selectAllEmp(_:)), forControlEvents: .TouchUpInside)
+        self.select.addTarget(self, action:#selector( SQLiteViewController.selectAllEmp(_:)), forControlEvents: .TouchUpInside)
         
 
         
@@ -58,8 +58,10 @@ class SQLiteViewController: UIViewController {
             Util.showToast(self, message: "输入框不能为空")
             return
         }
-       
-        let sql = "insert into T_Employee values（'\(self.name.text)','\(self.age.text)'）"
+
+        let sql = "insert into T_Employee(name,age) values('\(self.name.text!)','\(self.age.text!)')"
+        print("sql: \(sql)")
+
         let items =  dbManager.execSql(sql)
         Util.showToast(self, message: "插入 = \(items)")
     }

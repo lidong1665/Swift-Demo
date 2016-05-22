@@ -18,7 +18,6 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     //用户名
     @IBOutlet weak var tv_username: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad();
               

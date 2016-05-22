@@ -183,7 +183,12 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         self.performSegueWithIdentifier("four_segue", sender: self)
     }
     
-    //取消选中
+    /**
+     <#Description#>
+     
+     - parameter tableView: <#tableView description#>
+     - parameter indexPath: <#indexPath description#>
+     */
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
     }

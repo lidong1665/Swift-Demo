@@ -7,10 +7,7 @@
 //
 
 import UIKit
-/**
- *UI部分
- *
- **/
+/// UI部分
 class UIVIewViewController: UIViewController {
 
    
@@ -27,7 +24,11 @@ class UIVIewViewController: UIViewController {
         btn_label_button.addTarget(self, action:#selector(UIVIewViewController.OnClickBtn(_:)), forControlEvents: .TouchDown)
 
     }
-    
+    /**
+     <#Description#>
+     
+     - parameter button: <#button description#>
+     */
     func OnClickBtn(button:UIButton){
     
         switch button.tag {

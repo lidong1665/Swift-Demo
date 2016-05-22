@@ -73,8 +73,10 @@ class UIBUttonViewController: UIViewController {
     }
     
     /**
-    *按钮的事件处理
-    **/
+     按钮的事件处理
+     
+     - parameter btn: <#btn description#>
+     */
     
     func buttonTag(btn:UIButton) {
         
