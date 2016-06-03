@@ -84,7 +84,7 @@ class DBManager {
                 e.age = str1
                 mArrs.append(e)
             }
-            sqlite3_close_v2(stmt)
+            sqlite3_finalize(stmt)
             closeDb()
         }
         
