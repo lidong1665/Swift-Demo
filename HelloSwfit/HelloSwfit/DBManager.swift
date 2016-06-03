@@ -52,6 +52,7 @@ class DBManager {
     {
         // 返回结果
        let d =  sqlite3_exec(db, sql.cStringUsingEncoding(NSUTF8StringEncoding)!, nil, nil, nil) == SQLITE_OK
+    
         return d
     }
     
