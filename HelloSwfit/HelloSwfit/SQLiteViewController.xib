@@ -55,7 +55,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="226" width="384" height="374"/>
+                        <rect key="frame" x="8" y="226" width="384" height="326"/>
                     </variation>
                 </tableView>
             </subviews>

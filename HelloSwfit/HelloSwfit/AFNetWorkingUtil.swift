@@ -7,56 +7,78 @@
 //
 
 import UIKit
-/// 请求方法枚举
-enum TKRequestMethod: String{
-    case GET = "GET"
-    case POST = "POST"
-}
 
-/// 基础URL
-let BASE_URL = "http://192.168.1.124:8080"
-/// AFHTTPSessionManager
-let _sessionManager = AFHTTPSessionManager()
 
 /// 对AFNetworking的封装
 
-class AFNetWorkingUtil: NSObject {
+class AFNetWorkingUtil {
+    
+    
+    /// 基础URL
+    let BASE_URL = "http://v.juhe.cn"
+    /// AFHTTPSessionManager
+    let _sessionManager = AFHTTPSessionManager()
+    
+         /// 定义一个响应结果的传递代理
+    var  delegate: ResponseResultDelegate?
+    
+    // 单例  全局的的网络工具
+    class var sharedInstance: AFNetWorkingUtil
+    {
+        
+        struct Static {
+            static var onceToken : dispatch_once_t = 0
+            static var instance : AFNetWorkingUtil? = nil
+            
+        }
+        
+        dispatch_once(&Static.onceToken) {
+            Static.instance = AFNetWorkingUtil()
+        }
+        return Static.instance!
+    }
+    
+    
     /**
      获取baseUrl
      
-     - parameter baseUrl: <#baseUrl description#>
+     - parameter baseUrl: 基础的url
      
-     - returns: <#return value description#>
+     - returns: URL
      */
-    static func getBaseUrl(baseUrl:String) ->String{
+     func getBaseUrl(baseUrl:String) ->String{
     
         return BASE_URL
-    }
+     }
     /**
      post请求
      
-     - parameter action: <#action description#>
-     - parameter params: <#params description#>
+     - parameter action: 请求的action
+     - parameter params: 请求参数
      */
-    static func post(action:String,params:Dictionary<String,String>){
+     func post(action:String,params:Dictionary<String,String>){
     
-        _sessionManager.POST(getBaseUrl(BASE_URL+action), parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
+        _sessionManager.POST(getBaseUrl(BASE_URL)+action, parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
                 print(responseObj)
+            self.delegate?.responseSuccess(responseObj)
         }) { (operation:NSURLSessionDataTask? ,error:NSError) in
                 print(error)
+            self.delegate?.responseError(error)
         }
     }
     /**
     get请求
      
-     - parameter action: <#action description#>
-     - parameter params: <#params description#>
+     - parameter action: 请求的action
+     - parameter params: 请求参数
      */
-    static func get(action:String,params:Dictionary<String,String>){
-        _sessionManager.GET(getBaseUrl(BASE_URL+action), parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
+     func get(action:String,params:Dictionary<String,String>){
+        _sessionManager.GET(getBaseUrl(BASE_URL)+action, parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
             print(responseObj)
+            self.delegate?.responseSuccess(responseObj)
         }) { (operation:NSURLSessionDataTask? ,error:NSError) in
             print(error)
+            self.delegate?.responseError(error)
         }
     
     }

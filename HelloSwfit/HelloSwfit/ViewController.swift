@@ -143,7 +143,9 @@ class ViewController: UIViewController {
             Util.showToast(self, message: "closeed")
         }
     }
-    
+    /**
+    处理数据
+     */
     func handleData() {
         
         

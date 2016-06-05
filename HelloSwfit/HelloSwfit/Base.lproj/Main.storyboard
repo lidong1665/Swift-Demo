@@ -590,6 +590,24 @@
             </objects>
             <point key="canvasLocation" x="-368" y="139"/>
         </scene>
+        <!--Net Woking Get Demo-->
+        <scene sceneID="QNK-Np-x6O">
+            <objects>
+                <tableViewController id="8kW-eq-3sG" customClass="NetWokingGetDemo" customModule="HelloSwfit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OAS-IO-F4v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="8kW-eq-3sG" id="PZF-aP-jKM"/>
+                            <outlet property="delegate" destination="8kW-eq-3sG" id="Mwj-7w-hVg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FvG-aV-XYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2166" y="-586"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_back_bg" width="56" height="40"/>

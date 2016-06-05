@@ -10,23 +10,36 @@
  *数据库管理
  */
 class DBManager {
-    
+    let db_name = "/data.db3"
     var db: COpaquePointer = nil
     
     private static let instance = DBManager()
     // 单例  全局的数据访问接口
     class var sharedInstance: DBManager
     {
-        return instance
+        
+        struct Static {
+            static var onceToken : dispatch_once_t = 0
+            static var instance : DBManager? = nil
+            
+        }
+        
+        dispatch_once(&Static.onceToken) {
+            Static.instance = DBManager()
+        }
+        return Static.instance!
     }
+    
+    
+    
     //打开数据库
-    func openDatabase(dbName: String) -> Bool
+    func openDatabase() -> Bool
     {
         let documentPaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
              NSSearchPathDomainMask.UserDomainMask, true)
         let documnetPath = documentPaths[0]
         print("documnetPath= \(documnetPath)")
-        let error = sqlite3_open(documnetPath+dbName, &db)
+        let error = sqlite3_open(documnetPath+db_name, &db)
         if error != SQLITE_OK {
             print("SQLiteDB - failed to open DB!")
             sqlite3_close(db)
@@ -36,8 +49,7 @@ class DBManager {
     //创建数据库表
     func createTable() -> Bool
     {
-        
-        
+        openDatabase()
         let sql =
             "CREATE TABLE IF NOT EXISTS T_Employee ( \n" +
             "'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, \n" +
@@ -50,7 +62,8 @@ class DBManager {
     //执行SQL （插入，修改，删除）
     func execSql(sql: String) -> Bool
     {
-        // 返回结果
+        openDatabase()
+        
        let d =  sqlite3_exec(db, sql.cStringUsingEncoding(NSUTF8StringEncoding)!, nil, nil, nil) == SQLITE_OK
     
         return d
@@ -62,7 +75,7 @@ class DBManager {
     
     
     func selectAll(sql:String) -> Array<Employee> {
-       
+        openDatabase()
         var mArrs:Array<Employee> = []
         var stmt: COpaquePointer = nil
         if sqlite3_prepare_v2(db, sql.cStringUsingEncoding(NSUTF8StringEncoding)!, -1, &stmt, nil) == SQLITE_OK {

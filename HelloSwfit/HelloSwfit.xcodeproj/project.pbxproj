@@ -12,6 +12,8 @@
 		DD0110F01CE6C8320020148B /* WeiXinMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110EF1CE6C8320020148B /* WeiXinMessage.swift */; };
 		DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110F11CE6D84C0020148B /* WebViewController.swift */; };
 		DD0110F41CE721700020148B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110F31CE721700020148B /* MainViewController.swift */; };
+		DD124CC11D0294BD000149C7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CBF1D0294BD000149C7 /* icon.png */; };
+		DD124CC21D0294BD000149C7 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CC01D0294BD000149C7 /* icon@3x.png */; };
 		DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D27C41CE099520057C014 /* SecondViewController.swift */; };
 		DD8ECD481CDF74D200710CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD471CDF74D200710CA3 /* AppDelegate.swift */; };
 		DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD491CDF74D200710CA3 /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 		DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */; };
 		DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */; };
 		DDF8C4C11CEE943F00B0BC9E /* WinXinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF8C4BF1CEE943F00B0BC9E /* WinXinTableViewCell.xib */; };
+		DDFC71071D03AD4A00130B13 /* ResponseResultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */; };
+		DDFC710B1D03BA9D00130B13 /* NetWokingGetDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,8 @@
 		DD0110EF1CE6C8320020148B /* WeiXinMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiXinMessage.swift; sourceTree = "<group>"; };
 		DD0110F11CE6D84C0020148B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DD0110F31CE721700020148B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DD124CBF1D0294BD000149C7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DD124CC01D0294BD000149C7 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		DD8D27C41CE099520057C014 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DD8ECD441CDF74D200710CA3 /* HelloSwfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8ECD471CDF74D200710CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,8 @@
 		DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinXinTableViewCell.swift; sourceTree = "<group>"; };
 		DDF8C4BF1CEE943F00B0BC9E /* WinXinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinXinTableViewCell.xib; sourceTree = "<group>"; };
+		DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResultDelegate.swift; sourceTree = "<group>"; };
+		DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWokingGetDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +183,9 @@
 		DD8ECD461CDF74D200710CA3 /* HelloSwfit */ = {
 			isa = PBXGroup;
 			children = (
+				DDFC71081D03BA1E00130B13 /* NetWorking */,
+				DD124CC01D0294BD000149C7 /* icon@3x.png */,
+				DD124CBF1D0294BD000149C7 /* icon.png */,
 				DDBE3F611CF13FB2007A8E70 /* Improve */,
 				DDA8BDC71CE8293500D382C4 /* Util */,
 				DDA8BDC41CE819C400D382C4 /* UI */,
@@ -227,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				DDA8BDC81CE8297300D382C4 /* Util.swift */,
-				DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -241,6 +251,24 @@
 				DDBE3F801CF19C96007A8E70 /* Employee.swift */,
 			);
 			name = Improve;
+			sourceTree = "<group>";
+		};
+		DDFC71081D03BA1E00130B13 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				DDFC71091D03BA6700130B13 /* Demo */,
+				DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */,
+				DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */,
+			);
+			name = NetWorking;
+			sourceTree = "<group>";
+		};
+		DDFC71091D03BA6700130B13 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,7 +380,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF8C4C11CEE943F00B0BC9E /* WinXinTableViewCell.xib in Resources */,
+				DD124CC11D0294BD000149C7 /* icon.png in Resources */,
 				DD8ECD4F1CDF74D200710CA3 /* Assets.xcassets in Resources */,
+				DD124CC21D0294BD000149C7 /* icon@3x.png in Resources */,
 				DDBE3F651CF13FE3007A8E70 /* SQLiteViewController.xib in Resources */,
 				DD8ECD4D1CDF74D200710CA3 /* Main.storyboard in Resources */,
 			);
@@ -439,7 +469,9 @@
 				DD0110EE1CE6BDE40020148B /* WinXinResponse.swift in Sources */,
 				DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */,
 				DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */,
+				DDFC710B1D03BA9D00130B13 /* NetWokingGetDemo.swift in Sources */,
 				DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */,
+				DDFC71071D03AD4A00130B13 /* ResponseResultDelegate.swift in Sources */,
 				DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */,
 				DDBE3F671CF1438B007A8E70 /* DBManager.swift in Sources */,
 				DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 /// SQLite的使用
 class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
         /// 数据库名
-    let db_name = "/data.db3"
+    
     var items1 = []
     @IBOutlet weak var btn_submit: UIButton!
     @IBOutlet weak var tb_data: UITableView!
@@ -41,11 +41,9 @@ class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "SQLite学习"
-        let ddq = dbManager.openDatabase(db_name)
-        print("数据打开\(ddq)")
         let sucess = dbManager.createTable()
         print("表创建=\(sucess)")
-        tb_data.delegate = self
+               tb_data.delegate = self
         tb_data.dataSource = self
         
         self.btn_submit.addTarget(self, action:#selector( SQLiteViewController.submitAge(_:)), forControlEvents: .TouchUpInside)
@@ -53,10 +51,18 @@ class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.btn_submit.backgroundColor = UIColor.blueColor()
         
         self.select.addTarget(self, action:#selector( SQLiteViewController.selectAllEmp(_:)), forControlEvents: .TouchUpInside)
-        
-
-        
+        selectAllEmp()
     }
+    
+    
+    
+    func selectAllEmp() {
+        let sql = "select * from T_Employee"
+        items1 =  dbManager.selectAll(sql)
+        Util.showToast(self, message: "总数 = \(items1.count)")
+        self.tb_data.reloadData()
+    }
+    
     /**
      提交雇员信息
      
@@ -70,14 +76,12 @@ class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewData
         let  age_:String! = self.age.text
         
         if (username != nil && age_ != nil){
-           
-            
             let sql = "insert into T_Employee(name,age) values('\(self.name.text!)','\(self.age.text!)')"
             print("sql: \(sql)")
             
             let ii =  dbManager.execSql(sql)
             Util.showToast(self, message: "插入 = \(ii)")
-            
+            self.selectAllEmp()
         }else{
             Util.showToast(self, message: "输入框不能为空")
             return
@@ -91,10 +95,7 @@ class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewData
      */
     
     func selectAllEmp(btn:UIButton)  {
-        let sql = "select * from T_Employee"
-         items1 =  dbManager.selectAll(sql)
-            Util.showToast(self, message: "总数 = \(items1.count)")
-        self.tb_data.reloadData()
+        self.selectAllEmp()
     }
     /**
      更新用户信息
@@ -103,7 +104,7 @@ class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewData
      - parameter en:  雇员
      */
     func UpDateRmp(btn:UIButton,en:Employee)  {
-        
+            
         let sql = "update T_Employee set name = 'kkkk',age = '10' where id  = 5"
         
         let items =  dbManager.execSql(sql)
@@ -125,9 +126,13 @@ class SQLiteViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let emp:Employee = items1[indexPath.row] as! Employee
-        cell.textLabel?.text = "姓名："+emp.name+"年龄 :"+emp.age
-        
+        cell.textLabel?.text = "姓名："+emp.name+"  年龄 :"+emp.age
         return cell
     }
     
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        name.resignFirstResponder();
+        age.resignFirstResponder()
+    }
+
 }
