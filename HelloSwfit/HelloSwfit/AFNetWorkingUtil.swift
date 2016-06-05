@@ -55,19 +55,22 @@ class AFNetWorkingUtil {
      
      - parameter action: 请求的action
      - parameter params: 请求参数
+     - parameter v:      <#v description#>
      */
-     func post(action:String,params:Dictionary<String,String>){
-    
-        _sessionManager.POST(getBaseUrl(BASE_URL)+action, parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
+    func post(action:String,params:Dictionary<String,String>){
+        
+        _sessionManager.POST(getBaseUrl(BASE_URL)+action, parameters: params, success: { (operation:NSURLSessionDataTask?,
+            responseObj:AnyObject?) in
                 print(responseObj)
             self.delegate?.responseSuccess(responseObj)
         }) { (operation:NSURLSessionDataTask? ,error:NSError) in
                 print(error)
             self.delegate?.responseError(error)
+            
         }
     }
     /**
-    get请求
+     get请求
      
      - parameter action: 请求的action
      - parameter params: 请求参数

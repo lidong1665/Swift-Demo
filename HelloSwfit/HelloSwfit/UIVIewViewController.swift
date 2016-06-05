@@ -45,7 +45,7 @@ class UIVIewViewController: UIViewController {
             break
         case 3:
             
-            let ve = NetWokingGetDemo()
+            let ve = NetWokingGetDemoMVVM()
             
             self.navigationController?.pushViewController(ve, animated: true)
             print("21")

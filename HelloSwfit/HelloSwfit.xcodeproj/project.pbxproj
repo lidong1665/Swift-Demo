@@ -12,6 +12,11 @@
 		DD0110F01CE6C8320020148B /* WeiXinMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110EF1CE6C8320020148B /* WeiXinMessage.swift */; };
 		DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110F11CE6D84C0020148B /* WebViewController.swift */; };
 		DD0110F41CE721700020148B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0110F31CE721700020148B /* MainViewController.swift */; };
+		DD079C501D043525003B5AD4 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C4F1D043525003B5AD4 /* ProgressHUD.swift */; };
+		DD079C521D0462F4003B5AD4 /* ZGJMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C511D0462F4003B5AD4 /* ZGJMModel.swift */; };
+		DD079C541D0463FF003B5AD4 /* ZGJMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C531D0463FF003B5AD4 /* ZGJMViewModel.swift */; };
+		DD079C561D04649F003B5AD4 /* ZGJMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C551D04649F003B5AD4 /* ZGJMView.swift */; };
+		DD079C581D04693C003B5AD4 /* ZGJMMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */; };
 		DD124CC11D0294BD000149C7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CBF1D0294BD000149C7 /* icon.png */; };
 		DD124CC21D0294BD000149C7 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CC01D0294BD000149C7 /* icon@3x.png */; };
 		DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D27C41CE099520057C014 /* SecondViewController.swift */; };
@@ -65,6 +70,11 @@
 		DD0110EF1CE6C8320020148B /* WeiXinMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiXinMessage.swift; sourceTree = "<group>"; };
 		DD0110F11CE6D84C0020148B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DD0110F31CE721700020148B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DD079C4F1D043525003B5AD4 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		DD079C511D0462F4003B5AD4 /* ZGJMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMModel.swift; sourceTree = "<group>"; };
+		DD079C531D0463FF003B5AD4 /* ZGJMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMViewModel.swift; sourceTree = "<group>"; };
+		DD079C551D04649F003B5AD4 /* ZGJMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMView.swift; sourceTree = "<group>"; };
+		DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMMVVM.swift; sourceTree = "<group>"; };
 		DD124CBF1D0294BD000149C7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DD124CC01D0294BD000149C7 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		DD8D27C41CE099520057C014 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA8BDC81CE8297300D382C4 /* Util.swift */,
+				DD079C4F1D043525003B5AD4 /* ProgressHUD.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -267,6 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */,
+				DD079C511D0462F4003B5AD4 /* ZGJMModel.swift */,
+				DD079C531D0463FF003B5AD4 /* ZGJMViewModel.swift */,
+				DD079C551D04649F003B5AD4 /* ZGJMView.swift */,
+				DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -462,6 +477,7 @@
 				DDA23FB31CE32E9F001203BA /* DreamModel.swift in Sources */,
 				DDA23FB11CE32E43001203BA /* ResponseData.swift in Sources */,
 				DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */,
+				DD079C521D0462F4003B5AD4 /* ZGJMModel.swift in Sources */,
 				DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */,
 				DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */,
 				DDBE3F811CF19C96007A8E70 /* Employee.swift in Sources */,
@@ -470,9 +486,13 @@
 				DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */,
 				DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */,
 				DDFC710B1D03BA9D00130B13 /* NetWokingGetDemo.swift in Sources */,
+				DD079C581D04693C003B5AD4 /* ZGJMMVVM.swift in Sources */,
 				DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */,
 				DDFC71071D03AD4A00130B13 /* ResponseResultDelegate.swift in Sources */,
+				DD079C541D0463FF003B5AD4 /* ZGJMViewModel.swift in Sources */,
 				DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */,
+				DD079C561D04649F003B5AD4 /* ZGJMView.swift in Sources */,
+				DD079C501D043525003B5AD4 /* ProgressHUD.swift in Sources */,
 				DDBE3F671CF1438B007A8E70 /* DBManager.swift in Sources */,
 				DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */,
 				DD0110F01CE6C8320020148B /* WeiXinMessage.swift in Sources */,

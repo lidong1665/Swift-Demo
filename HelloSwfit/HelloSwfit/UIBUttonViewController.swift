@@ -67,10 +67,9 @@ class UIBUttonViewController: UIViewController {
         //设置标签的背景颜色为黄色
         lable.backgroundColor = UIColor.yellowColor()
         
+        
         self.view.addSubview(lable)
-        
-        
-    }
+             }
     
     /**
      按钮的事件处理
@@ -79,15 +78,48 @@ class UIBUttonViewController: UIViewController {
      */
     
     func buttonTag(btn:UIButton) {
+        /**
+         <#Description#>
+         
+         - parameter withTitle: <#withTitle description#>
+         */
+//        ProgressHUD.sharedInstance.showDefaultLoadingAlertOnView(self.view, withTitle: "Loading")
+//        
+//        ProgressHUD.sharedInstance.showDefaultErrorAlertOnView(self.view, withTitle: "登录失败")
+//        
+//        
+//        ProgressHUD.sharedInstance.showDefaultDoneAlertOnView(self.view, withTitle: "登录成功")
         
-        let alter = UIAlertController(title: "Information",message: "Button Event",preferredStyle: UIAlertControllerStyle.Alert)
+//        
+//        let alter = UIAlertController(title: "Information",message: "Button Event",preferredStyle: UIAlertControllerStyle.Alert)
+//        
+//        let oKAction = UIAlertAction(title: "OK",style: UIAlertActionStyle.Default,handler: nil)
+//        alter.addAction(oKAction)
+//        
+//        self.presentViewController(alter, animated: true, completion: nil)
         
-        let oKAction = UIAlertAction(title: "OK",style: UIAlertActionStyle.Default,handler: nil)
-        alter.addAction(oKAction)
         
-        self.presentViewController(alter, animated: true, completion: nil)
-    
+     MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        let popTime = dispatch_time(DISPATCH_TIME_NOW,
+                                        Int64(20.0 * Double(NSEC_PER_SEC)))
+        dispatch_after(popTime,dispatch_get_main_queue()) {
+            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            
+        }
     }
+    
+    
+    
+
+//    dispatch_after(popTime, GlobalMainQueue) { // 2
+//    let count = PhotoManager.sharedManager.photos.count
+//    if count > 0 {
+//    self.navigationItem.prompt = nil
+//    } else {
+//    self.navigationItem.prompt = "Add photos with faces to Googlyify them!"
+//    }
+//    }
     
 
     override func didReceiveMemoryWarning() {

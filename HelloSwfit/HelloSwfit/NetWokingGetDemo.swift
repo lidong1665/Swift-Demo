@@ -27,7 +27,7 @@ class NetWokingGetDemo: UITableViewController,
         aFUtils.get(action, params: dic)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.title = "周公解梦"
+        self.title = "GET请求"
     }
     
     func responseError(responseObj: AnyObject?) {

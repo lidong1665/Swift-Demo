@@ -52,4 +52,17 @@ class Util {
         vc.view.makeToast(message)
     }
 
+    /**
+     获取DocumnetPath
+     
+     - returns: <#return value description#>
+     */
+    
+   static func getDocumnetPath() -> String {
+        let documentPaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
+             NSSearchPathDomainMask.UserDomainMask, true)
+        let documnetPath = documentPaths[0]
+        print("documnetPath= \(documnetPath)")
+        return  documnetPath
+    }
 }

@@ -35,10 +35,9 @@ class DBManager {
     //打开数据库
     func openDatabase() -> Bool
     {
-        let documentPaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
-             NSSearchPathDomainMask.UserDomainMask, true)
-        let documnetPath = documentPaths[0]
-        print("documnetPath= \(documnetPath)")
+        /// 获取documnetPath
+        let documnetPath = Util.getDocumnetPath()
+        /// 打开数据库
         let error = sqlite3_open(documnetPath+db_name, &db)
         if error != SQLITE_OK {
             print("SQLiteDB - failed to open DB!")
