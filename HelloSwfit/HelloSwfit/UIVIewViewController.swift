@@ -34,18 +34,19 @@ class UIVIewViewController: UIViewController {
         switch button.tag {
             
         case 1:
-            Util.log("lable", message: "第一个按钮")
-            Util.openNewViewController("Main", vc: self)
-            break
-        case 2:
             let ve = UIBUttonViewController()
             
             self.navigationController?.pushViewController(ve, animated: true)
-             print("21")
+            print("21")
+           
+            break
+        case 2:
+            Util.log("lable", message: "第一个按钮")
+            Util.openNewViewController("Main", vc: self)
             break
         case 3:
             
-            let ve = NetWokingGetDemoMVVM()
+            let ve = SQLiteViewController()
             
             self.navigationController?.pushViewController(ve, animated: true)
             print("21")

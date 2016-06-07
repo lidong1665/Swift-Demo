@@ -19,6 +19,7 @@
 		DD079C581D04693C003B5AD4 /* ZGJMMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */; };
 		DD124CC11D0294BD000149C7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CBF1D0294BD000149C7 /* icon.png */; };
 		DD124CC21D0294BD000149C7 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CC01D0294BD000149C7 /* icon@3x.png */; };
+		DD2B62571D05B50E00A4E750 /* NetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B62561D05B50E00A4E750 /* NetController.swift */; };
 		DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D27C41CE099520057C014 /* SecondViewController.swift */; };
 		DD8ECD481CDF74D200710CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD471CDF74D200710CA3 /* AppDelegate.swift */; };
 		DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD491CDF74D200710CA3 /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMMVVM.swift; sourceTree = "<group>"; };
 		DD124CBF1D0294BD000149C7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DD124CC01D0294BD000149C7 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		DD2B62561D05B50E00A4E750 /* NetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetController.swift; sourceTree = "<group>"; };
 		DD8D27C41CE099520057C014 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DD8ECD441CDF74D200710CA3 /* HelloSwfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8ECD471CDF74D200710CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				DDFC71091D03BA6700130B13 /* Demo */,
 				DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */,
 				DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */,
+				DD2B62561D05B50E00A4E750 /* NetController.swift */,
 			);
 			name = NetWorking;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */,
 				DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */,
 				DDBE3F811CF19C96007A8E70 /* Employee.swift in Sources */,
+				DD2B62571D05B50E00A4E750 /* NetController.swift in Sources */,
 				DDBE3F641CF13FE3007A8E70 /* SQLiteViewController.swift in Sources */,
 				DD0110EE1CE6BDE40020148B /* WinXinResponse.swift in Sources */,
 				DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */,

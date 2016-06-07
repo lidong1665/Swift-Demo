@@ -33,7 +33,7 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         self.tb_wexin.dataSource = self
         self.tb_wexin.delegate = self
         self.items  = Array<WeiXinMessage>()
-        self.lb_title.text = "微信新闻"
+        self.lb_title.text = "POST请求"
         let nib = UINib(nibName: "WinXinTableViewCell", bundle: nil) //nibName指的是我们创建的Cell文件名
         self.tb_wexin.registerNib(nib, forCellReuseIdentifier: cellId)
         // 为按钮添加事件

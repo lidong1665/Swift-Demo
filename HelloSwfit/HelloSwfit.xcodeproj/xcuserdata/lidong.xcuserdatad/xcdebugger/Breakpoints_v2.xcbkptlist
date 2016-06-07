@@ -56,7 +56,7 @@
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/SecondViewController.swift"
-                  timestampString = "486829380.466962"
+                  timestampString = "486916753.075923"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -71,7 +71,7 @@
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/SecondViewController.swift"
-                  timestampString = "486829380.467091"
+                  timestampString = "486916753.076065"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -86,7 +86,7 @@
                   moduleName = "HelloSwfit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/SecondViewController.swift"
-                  timestampString = "486829380.467265"
+                  timestampString = "486916753.076182"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -206,84 +206,6 @@
             endingLineNumber = "64"
             landmarkName = "adjustStateWithContentOffset()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelloSwfit/FourViewController.swift"
-            timestampString = "485429466.165407"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "FourViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HelloSwfit.FourViewController.items.getter : Swift.Array&lt;HelloSwfit.WeiXinMessage&gt;"
-                  moduleName = "HelloSwfit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/FourViewController.swift"
-                  timestampString = "486829380.470342"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HelloSwfit.FourViewController.items.setter : Swift.Array&lt;HelloSwfit.WeiXinMessage&gt;"
-                  moduleName = "HelloSwfit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/FourViewController.swift"
-                  timestampString = "486829380.470471"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "65">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HelloSwfit.FourViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; HelloSwfit.FourViewController"
-                  moduleName = "HelloSwfit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/FourViewController.swift"
-                  timestampString = "486829380.470562"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "315">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HelloSwfit.FourViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;HelloSwfit.FourViewController&gt;"
-                  moduleName = "HelloSwfit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lidong/IOS-Projects/Swift-Demo/HelloSwfit/HelloSwfit/FourViewController.swift"
-                  timestampString = "486829380.470653"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "218">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

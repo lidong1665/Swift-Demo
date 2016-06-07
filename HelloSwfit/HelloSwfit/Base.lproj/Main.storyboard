@@ -548,7 +548,7 @@
         <!--网络-->
         <scene sceneID="Vp4-7j-1do">
             <objects>
-                <viewController id="5h1-ZI-wQL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="net_view" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5h1-ZI-wQL" customClass="NetController" customModule="HelloSwfit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mfd-d1-8bF"/>
                         <viewControllerLayoutGuide type="bottom" id="TTO-hC-Aeu"/>
@@ -556,17 +556,67 @@
                     <view key="view" contentMode="scaleToFill" id="4LF-yg-zZP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seu-sf-GZK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-RT-eyK">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.17476530106518207" blue="0.56297638361885927" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="1.AFNetwoking的Get请求"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="27" y="15" width="316" height="30"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkr-Kh-11Y">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.30623436577687158" blue="0.15200467124369466" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="2.AFNetwoking的Post请求"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="27" y="67" width="316" height="30"/>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="q3K-RT-eyK"/>
+                                        <exclude reference="rkr-Kh-11Y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="487"/>
+                                    <mask key="subviews">
+                                        <include reference="q3K-RT-eyK"/>
+                                        <include reference="rkr-Kh-11Y"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="seu-sf-GZK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="seu-sf-GZK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="网络" image="ic_find_replace_white_24dp.png" id="6rM-JW-4VB">
                         <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnGet" destination="q3K-RT-eyK" id="IVl-iD-Muh"/>
+                        <outlet property="btnPost" destination="rkr-Kh-11Y" id="8wP-L1-hYx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsn-5N-6xR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790.5" y="-109"/>
+            <point key="canvasLocation" x="661.5" y="-411"/>
         </scene>
         <!--进阶-->
         <scene sceneID="ZxM-AJ-EjW">
@@ -617,6 +667,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mo8-Vz-rAH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YDq-Gz-W5j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

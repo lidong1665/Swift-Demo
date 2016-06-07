@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class NetWokingGetDemoMVVM: UITableViewController,ZGJMView {
+class ZGJMDemoMVVM: UITableViewController,ZGJMView {
     
     var items:Array = [String]()
     
