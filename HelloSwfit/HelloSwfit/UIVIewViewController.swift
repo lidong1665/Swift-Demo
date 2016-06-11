@@ -46,7 +46,7 @@ class UIVIewViewController: UIViewController {
             break
         case 3:
             
-            let ve = SQLiteViewController()
+            let ve = RealmDemo()
             
             self.navigationController?.pushViewController(ve, animated: true)
             print("21")
