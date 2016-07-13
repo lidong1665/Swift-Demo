@@ -17,10 +17,16 @@
 		DD079C541D0463FF003B5AD4 /* ZGJMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C531D0463FF003B5AD4 /* ZGJMViewModel.swift */; };
 		DD079C561D04649F003B5AD4 /* ZGJMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C551D04649F003B5AD4 /* ZGJMView.swift */; };
 		DD079C581D04693C003B5AD4 /* ZGJMMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */; };
-		DD124CC11D0294BD000149C7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CBF1D0294BD000149C7 /* icon.png */; };
-		DD124CC21D0294BD000149C7 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD124CC01D0294BD000149C7 /* icon@3x.png */; };
 		DD2B62571D05B50E00A4E750 /* NetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B62561D05B50E00A4E750 /* NetController.swift */; };
 		DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D27C41CE099520057C014 /* SecondViewController.swift */; };
+		DD8D6D5D1D0BA2F3005002DE /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D6D5C1D0BA2F3005002DE /* Dog.swift */; };
+		DD8D6D5F1D0BA523005002DE /* RealmUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D6D5E1D0BA523005002DE /* RealmUtil.swift */; };
+		DD8D6D611D0BA8F4005002DE /* RealmDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D6D601D0BA8F4005002DE /* RealmDemo.swift */; };
+		DD8D6D631D0BAB66005002DE /* HandleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D6D621D0BAB66005002DE /* HandleData.swift */; };
+		DD8D6E741D0BB283005002DE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D6E731D0BB283005002DE /* Realm.framework */; };
+		DD8D6E751D0BB283005002DE /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D6E731D0BB283005002DE /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD8D6E791D0BB2BE005002DE /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D6E781D0BB2BE005002DE /* RealmSwift.framework */; };
+		DD8D6E7A1D0BB2BE005002DE /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D6E781D0BB2BE005002DE /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD8ECD481CDF74D200710CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD471CDF74D200710CA3 /* AppDelegate.swift */; };
 		DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8ECD491CDF74D200710CA3 /* ViewController.swift */; };
 		DD8ECD4D1CDF74D200710CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8ECD4B1CDF74D200710CA3 /* Main.storyboard */; };
@@ -38,12 +44,19 @@
 		DDBE3F671CF1438B007A8E70 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE3F661CF1438B007A8E70 /* DBManager.swift */; };
 		DDBE3F771CF163E3007A8E70 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBE3F761CF163E3007A8E70 /* libsqlite3.0.tbd */; };
 		DDBE3F811CF19C96007A8E70 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE3F801CF19C96007A8E70 /* Employee.swift */; };
+		DDCF27241D2E098D00DC0760 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF27231D2E098D00DC0760 /* BaseViewController.swift */; };
+		DDCF27761D2E4E4600DC0760 /* AFNetWokingBlockUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF27751D2E4E4600DC0760 /* AFNetWokingBlockUtil.swift */; };
+		DDCF27781D2E512600DC0760 /* NetBlockDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF27771D2E512600DC0760 /* NetBlockDemo.swift */; };
+		DDCFB17E1D1197EB003EC66A /* CollectionViewCellDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCFB17C1D1197EB003EC66A /* CollectionViewCellDemo.swift */; };
+		DDCFB1811D11A280003EC66A /* DemoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCFB1801D11A280003EC66A /* DemoCollectionViewController.swift */; };
 		DDD1A7AF1CE17B5A009055A7 /* ThridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */; };
 		DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */; };
 		DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */; };
 		DDF8C4C11CEE943F00B0BC9E /* WinXinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF8C4BF1CEE943F00B0BC9E /* WinXinTableViewCell.xib */; };
 		DDFC71071D03AD4A00130B13 /* ResponseResultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */; };
 		DDFC710B1D03BA9D00130B13 /* NetWokingGetDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */; };
+		DDFF50201D2F2FDD00B9443F /* WxjxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF501F1D2F2FDD00B9443F /* WxjxModel.swift */; };
+		DDFF50221D2F35DA00B9443F /* WxjxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF50211D2F35DA00B9443F /* WxjxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +76,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DD8D6E701D0BB191005002DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD8D6E7A1D0BB2BE005002DE /* RealmSwift.framework in Embed Frameworks */,
+				DD8D6E751D0BB283005002DE /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2C4393C4BB8B28DAEBD7A5AA /* Pods_HelloSwfit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloSwfit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D870618D4489DB5E1302E7 /* Pods-HelloSwfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSwfit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloSwfit/Pods-HelloSwfit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,10 +104,15 @@
 		DD079C531D0463FF003B5AD4 /* ZGJMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMViewModel.swift; sourceTree = "<group>"; };
 		DD079C551D04649F003B5AD4 /* ZGJMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMView.swift; sourceTree = "<group>"; };
 		DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGJMMVVM.swift; sourceTree = "<group>"; };
-		DD124CBF1D0294BD000149C7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		DD124CC01D0294BD000149C7 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		DD2B62561D05B50E00A4E750 /* NetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetController.swift; sourceTree = "<group>"; };
 		DD8D27C41CE099520057C014 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DD8D6D5C1D0BA2F3005002DE /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		DD8D6D5E1D0BA523005002DE /* RealmUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmUtil.swift; sourceTree = "<group>"; };
+		DD8D6D601D0BA8F4005002DE /* RealmDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDemo.swift; sourceTree = "<group>"; };
+		DD8D6D621D0BAB66005002DE /* HandleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleData.swift; sourceTree = "<group>"; };
+		DD8D6E731D0BB283005002DE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		DD8D6E761D0BB29C005002DE /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Downloads/realm-swift-1.0.0/ios/swift-2.2/RealmSwift.framework"; sourceTree = "<group>"; };
+		DD8D6E781D0BB2BE005002DE /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		DD8ECD441CDF74D200710CA3 /* HelloSwfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8ECD471CDF74D200710CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD8ECD491CDF74D200710CA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,12 +138,19 @@
 		DDBE3F761CF163E3007A8E70 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		DDBE3F7A1CF16854007A8E70 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = "../../../Library/Developer/Xcode/DerivedData/HelloSwfit-ekghrcfzqfzisnezkyrvbwogazxf/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework"; sourceTree = "<group>"; };
 		DDBE3F801CF19C96007A8E70 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		DDCF27231D2E098D00DC0760 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DDCF27751D2E4E4600DC0760 /* AFNetWokingBlockUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNetWokingBlockUtil.swift; sourceTree = "<group>"; };
+		DDCF27771D2E512600DC0760 /* NetBlockDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetBlockDemo.swift; sourceTree = "<group>"; };
+		DDCFB17C1D1197EB003EC66A /* CollectionViewCellDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellDemo.swift; sourceTree = "<group>"; };
+		DDCFB1801D11A280003EC66A /* DemoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewController.swift; sourceTree = "<group>"; };
 		DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThridViewController.swift; sourceTree = "<group>"; };
 		DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinXinTableViewCell.swift; sourceTree = "<group>"; };
 		DDF8C4BF1CEE943F00B0BC9E /* WinXinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinXinTableViewCell.xib; sourceTree = "<group>"; };
 		DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResultDelegate.swift; sourceTree = "<group>"; };
 		DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWokingGetDemo.swift; sourceTree = "<group>"; };
+		DDFF501F1D2F2FDD00B9443F /* WxjxModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WxjxModel.swift; sourceTree = "<group>"; };
+		DDFF50211D2F35DA00B9443F /* WxjxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WxjxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +158,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8D6E741D0BB283005002DE /* Realm.framework in Frameworks */,
 				DDBE3F771CF163E3007A8E70 /* libsqlite3.0.tbd in Frameworks */,
+				DD8D6E791D0BB2BE005002DE /* RealmSwift.framework in Frameworks */,
 				5846947DE67872CD189B8AB1 /* Pods_HelloSwfit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +194,7 @@
 		BAD02A270BA73FCDEED26641 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD8D6E761D0BB29C005002DE /* RealmSwift.framework */,
 				DDBE3F7A1CF16854007A8E70 /* SQLite.framework */,
 				DDBE3F761CF163E3007A8E70 /* libsqlite3.0.tbd */,
 				2C4393C4BB8B28DAEBD7A5AA /* Pods_HelloSwfit.framework */,
@@ -170,9 +213,33 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		DD8D6D5A1D0BA26F005002DE /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				DDBE3F661CF1438B007A8E70 /* DBManager.swift */,
+				DDBE3F801CF19C96007A8E70 /* Employee.swift */,
+				DDBE3F631CF13FE3007A8E70 /* SQLiteViewController.xib */,
+				DDBE3F621CF13FE3007A8E70 /* SQLiteViewController.swift */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
+		DD8D6D5B1D0BA294005002DE /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DD8D6D5C1D0BA2F3005002DE /* Dog.swift */,
+				DD8D6D5E1D0BA523005002DE /* RealmUtil.swift */,
+				DD8D6D601D0BA8F4005002DE /* RealmDemo.swift */,
+				DD8D6D621D0BAB66005002DE /* HandleData.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
 		DD8ECD3B1CDF74D200710CA3 = {
 			isa = PBXGroup;
 			children = (
+				DD8D6E781D0BB2BE005002DE /* RealmSwift.framework */,
+				DD8D6E731D0BB283005002DE /* Realm.framework */,
 				DD8ECD461CDF74D200710CA3 /* HelloSwfit */,
 				DD8ECD5B1CDF74D200710CA3 /* HelloSwfitTests */,
 				DD8ECD661CDF74D200710CA3 /* HelloSwfitUITests */,
@@ -196,8 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				DDFC71081D03BA1E00130B13 /* NetWorking */,
-				DD124CC01D0294BD000149C7 /* icon@3x.png */,
-				DD124CBF1D0294BD000149C7 /* icon.png */,
 				DDBE3F611CF13FB2007A8E70 /* Improve */,
 				DDA8BDC71CE8293500D382C4 /* Util */,
 				DDA8BDC41CE819C400D382C4 /* UI */,
@@ -211,7 +276,6 @@
 				DDD1A7AE1CE17B5A009055A7 /* ThridViewController.swift */,
 				DDD1A7B01CE17BA6009055A7 /* FourViewController.swift */,
 				DDA23F6E1CE30A0B001203BA /* HelloSwfit-Bridging-Header.h */,
-				DD0110F11CE6D84C0020148B /* WebViewController.swift */,
 				DD0110F31CE721700020148B /* MainViewController.swift */,
 				DDF8C4BE1CEE943F00B0BC9E /* WinXinTableViewCell.swift */,
 				DDF8C4BF1CEE943F00B0BC9E /* WinXinTableViewCell.xib */,
@@ -242,6 +306,8 @@
 			children = (
 				DDA8BDC51CE81A0400D382C4 /* UIVIewViewController.swift */,
 				DD90480B1CF051C100F44EE8 /* UIBUttonViewController.swift */,
+				DDCFB17C1D1197EB003EC66A /* CollectionViewCellDemo.swift */,
+				DDCFB1801D11A280003EC66A /* DemoCollectionViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -251,6 +317,7 @@
 			children = (
 				DDA8BDC81CE8297300D382C4 /* Util.swift */,
 				DD079C4F1D043525003B5AD4 /* ProgressHUD.swift */,
+				DDCF27231D2E098D00DC0760 /* BaseViewController.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -258,10 +325,8 @@
 		DDBE3F611CF13FB2007A8E70 /* Improve */ = {
 			isa = PBXGroup;
 			children = (
-				DDBE3F621CF13FE3007A8E70 /* SQLiteViewController.swift */,
-				DDBE3F631CF13FE3007A8E70 /* SQLiteViewController.xib */,
-				DDBE3F661CF1438B007A8E70 /* DBManager.swift */,
-				DDBE3F801CF19C96007A8E70 /* Employee.swift */,
+				DD8D6D5B1D0BA294005002DE /* Realm */,
+				DD8D6D5A1D0BA26F005002DE /* SQLite */,
 			);
 			name = Improve;
 			sourceTree = "<group>";
@@ -269,24 +334,37 @@
 		DDFC71081D03BA1E00130B13 /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
-				DDFC71091D03BA6700130B13 /* Demo */,
+				DDFF501E1D2F2E6700B9443F /* Block_Demo */,
+				DDFC71091D03BA6700130B13 /* Delegate_Demo */,
 				DDFC71061D03AD4A00130B13 /* ResponseResultDelegate.swift */,
 				DDBC7F2F1CEB46BC0048B4ED /* AFNetWorkingUtil.swift */,
 				DD2B62561D05B50E00A4E750 /* NetController.swift */,
+				DDCF27751D2E4E4600DC0760 /* AFNetWokingBlockUtil.swift */,
 			);
 			name = NetWorking;
 			sourceTree = "<group>";
 		};
-		DDFC71091D03BA6700130B13 /* Demo */ = {
+		DDFC71091D03BA6700130B13 /* Delegate_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DD0110F11CE6D84C0020148B /* WebViewController.swift */,
 				DDFC710A1D03BA9D00130B13 /* NetWokingGetDemo.swift */,
 				DD079C511D0462F4003B5AD4 /* ZGJMModel.swift */,
 				DD079C531D0463FF003B5AD4 /* ZGJMViewModel.swift */,
 				DD079C551D04649F003B5AD4 /* ZGJMView.swift */,
 				DD079C571D04693C003B5AD4 /* ZGJMMVVM.swift */,
 			);
-			name = Demo;
+			name = Delegate_Demo;
+			sourceTree = "<group>";
+		};
+		DDFF501E1D2F2E6700B9443F /* Block_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DDCF27771D2E512600DC0760 /* NetBlockDemo.swift */,
+				DDFF501F1D2F2FDD00B9443F /* WxjxModel.swift */,
+				DDFF50211D2F35DA00B9443F /* WxjxViewModel.swift */,
+			);
+			name = Block_Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +380,7 @@
 				DD8ECD421CDF74D200710CA3 /* Resources */,
 				5C7E5181702B29C68E6BF965 /* 📦 Embed Pods Frameworks */,
 				D846BE96F02455525DE3A98B /* 📦 Copy Pods Resources */,
+				DD8D6E701D0BB191005002DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,9 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF8C4C11CEE943F00B0BC9E /* WinXinTableViewCell.xib in Resources */,
-				DD124CC11D0294BD000149C7 /* icon.png in Resources */,
 				DD8ECD4F1CDF74D200710CA3 /* Assets.xcassets in Resources */,
-				DD124CC21D0294BD000149C7 /* icon@3x.png in Resources */,
 				DDBE3F651CF13FE3007A8E70 /* SQLiteViewController.xib in Resources */,
 				DD8ECD4D1CDF74D200710CA3 /* Main.storyboard in Resources */,
 			);
@@ -475,28 +552,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCF27781D2E512600DC0760 /* NetBlockDemo.swift in Sources */,
 				DD90480C1CF051C100F44EE8 /* UIBUttonViewController.swift in Sources */,
+				DD8D6D5F1D0BA523005002DE /* RealmUtil.swift in Sources */,
 				DD0110F41CE721700020148B /* MainViewController.swift in Sources */,
 				DDA23FB31CE32E9F001203BA /* DreamModel.swift in Sources */,
 				DDA23FB11CE32E43001203BA /* ResponseData.swift in Sources */,
 				DD8D27C51CE099520057C014 /* SecondViewController.swift in Sources */,
+				DDFF50201D2F2FDD00B9443F /* WxjxModel.swift in Sources */,
 				DD079C521D0462F4003B5AD4 /* ZGJMModel.swift in Sources */,
+				DDCF27241D2E098D00DC0760 /* BaseViewController.swift in Sources */,
 				DDF8C4C01CEE943F00B0BC9E /* WinXinTableViewCell.swift in Sources */,
 				DD8ECD4A1CDF74D200710CA3 /* ViewController.swift in Sources */,
+				DDCFB17E1D1197EB003EC66A /* CollectionViewCellDemo.swift in Sources */,
 				DDBE3F811CF19C96007A8E70 /* Employee.swift in Sources */,
 				DD2B62571D05B50E00A4E750 /* NetController.swift in Sources */,
 				DDBE3F641CF13FE3007A8E70 /* SQLiteViewController.swift in Sources */,
 				DD0110EE1CE6BDE40020148B /* WinXinResponse.swift in Sources */,
 				DDA8BDC91CE8297300D382C4 /* Util.swift in Sources */,
 				DDD1A7B11CE17BA6009055A7 /* FourViewController.swift in Sources */,
+				DD8D6D631D0BAB66005002DE /* HandleData.swift in Sources */,
 				DDFC710B1D03BA9D00130B13 /* NetWokingGetDemo.swift in Sources */,
+				DD8D6D611D0BA8F4005002DE /* RealmDemo.swift in Sources */,
 				DD079C581D04693C003B5AD4 /* ZGJMMVVM.swift in Sources */,
 				DDBC7F301CEB46BC0048B4ED /* AFNetWorkingUtil.swift in Sources */,
 				DDFC71071D03AD4A00130B13 /* ResponseResultDelegate.swift in Sources */,
+				DDFF50221D2F35DA00B9443F /* WxjxViewModel.swift in Sources */,
+				DDCF27761D2E4E4600DC0760 /* AFNetWokingBlockUtil.swift in Sources */,
 				DD079C541D0463FF003B5AD4 /* ZGJMViewModel.swift in Sources */,
 				DDA8BDC61CE81A0400D382C4 /* UIVIewViewController.swift in Sources */,
 				DD079C561D04649F003B5AD4 /* ZGJMView.swift in Sources */,
 				DD079C501D043525003B5AD4 /* ProgressHUD.swift in Sources */,
+				DDCFB1811D11A280003EC66A /* DemoCollectionViewController.swift in Sources */,
+				DD8D6D5D1D0BA2F3005002DE /* Dog.swift in Sources */,
 				DDBE3F671CF1438B007A8E70 /* DBManager.swift in Sources */,
 				DD0110F21CE6D84C0020148B /* WebViewController.swift in Sources */,
 				DD0110F01CE6C8320020148B /* WeiXinMessage.swift in Sources */,
@@ -641,6 +729,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloSwfit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -662,6 +756,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloSwfit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -31,16 +31,16 @@ class NetWokingGetDemo: UITableViewController,
     }
     
     func responseError(responseObj: AnyObject?) {
-        Util.log("responseSuccess", message: "服务器异常！")
+        Util.log_s("responseSuccess", message: "服务器异常！")
     }
     
     func responseSuccess(responseObj: AnyObject?) {
         
         let json = JSON(responseObj!)
         
-        Util.log("responseSuccess", message: json["error_code"].intValue)
-        Util.log("responseSuccess", message: json["reason"].string!)
-        Util.log("responseSuccess", message: json["result"].array!.count)
+        Util.log_i("responseSuccess", message: json["error_code"].intValue)
+        Util.log_s("responseSuccess", message: json["reason"].string!)
+        Util.log_i("responseSuccess", message: json["result"].array!.count)
         
         let d =  json["result"].array!.count
         if d > 0  {

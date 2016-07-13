@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDelegate{
+class FourViewController:  BaseViewController,UITableViewDataSource,UITableViewDelegate{
     
     @IBOutlet weak var lb_title: UILabel!
     @IBOutlet weak var lab_back: UIButton!
@@ -28,12 +28,9 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//        headerRefresh()
-        initData(1)
         self.tb_wexin.dataSource = self
         self.tb_wexin.delegate = self
         self.items  = Array<WeiXinMessage>()
-        self.lb_title.text = "POST请求"
         let nib = UINib(nibName: "WinXinTableViewCell", bundle: nil) //nibName指的是我们创建的Cell文件名
         self.tb_wexin.registerNib(nib, forCellReuseIdentifier: cellId)
         // 为按钮添加事件
@@ -48,6 +45,9 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         footer.setRefreshingTarget(self, refreshingAction: #selector(FourViewController.footerRefresh))
         self.tb_wexin.mj_footer = footer
         
+        headerRefresh()
+        self.tb_wexin.mj_header.hidden = false
+        self.tb_wexin.mj_footer.hidden = false
     }
     
     
@@ -100,7 +100,9 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
                         }
                                         
                         }else{
-                        
+                        if self.pno == 1 {
+                        self.header.endRefreshing()
+                        }
                         self.footer.endRefreshingWithNoMoreData()
                         }
                         }else{
@@ -235,7 +237,7 @@ class FourViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         // 2次后模拟没有更多数据
         pno += 1
         initData(pno)
-        Util.log("底部刷新", message: pno)
+        Util.log_i("底部刷新", message: pno)
     }
 
     

@@ -26,5 +26,6 @@ protocol  ZGJMView {
      */
     func getZGJM(items:Array<String>)
     
-    
+    func getZGJMFailure(error:String)
+
 }

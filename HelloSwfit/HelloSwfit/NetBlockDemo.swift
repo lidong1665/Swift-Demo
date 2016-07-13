@@ -1,13 +1,16 @@
 //
-//  NetWokingGetDemoMVVM.swift
+//  NetBlockDemo.swift
 //  HelloSwfit
 //
-//  Created by lidong on 16/6/5.
+//  Created by lidong on 16/7/7.
 //  Copyright © 2016年 lidong. All rights reserved.
 //
 
-import UIKit
-class ZGJMDemoMVVM: UITableViewController,ZGJMView {
+import Foundation
+import SwiftyJSON
+/// Block的简单使用
+class NetBlockDemo: UITableViewController,ZGJMView
+{
     
     var items:Array = [String]()
     
@@ -19,7 +22,7 @@ class ZGJMDemoMVVM: UITableViewController,ZGJMView {
         self.tableView.dataSource = self
         self.title = "GET请求"
         
-        let vm = ZGJMViewModel(view: self)
+        let vm = WxjxViewModel(view: self)
         vm.getZGJMData()
     }
     
@@ -37,11 +40,12 @@ class ZGJMDemoMVVM: UITableViewController,ZGJMView {
     
     func getZGJM(items: Array<String>) {
         self.items = items
+        print("@@@@@@@@@\(items.count)")
         self.tableView.reloadData()
     }
     
     func getZGJMFailure(error: String) {
-        print("33333333333")
+        print("000000000000000")
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

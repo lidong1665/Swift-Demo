@@ -60,17 +60,18 @@ class ZGJMModel:ResponseResultDelegate {
         var items:Array = [String]()
         let json = JSON(responseObj!)
         
-        Util.log("responseSuccess", message: json["error_code"].intValue)
-        Util.log("responseSuccess", message: json["reason"].string!)
-        Util.log("responseSuccess", message: json["result"].array!.count)
-        
-        let d =  json["result"].array!.count
-        if d > 0  {
-            let list: Array<JSON> =  json["result"].array!
-            
-            for item in list {
-                items.append(item["name"].string!)
+        Util.log_i("responseSuccess", message: json["error_code"].intValue)
+        Util.log_s("responseSuccess", message: json["reason"].string!)
+        if json["result"].array != nil  && json["result"].array!.count > 0 {
+            let d =  json["result"].array!.count
+            if d > 0  {
+                let list: Array<JSON> =  json["result"].array!
+                
+                for item in list {
+                    items.append(item["name"].string!)
+                }
             }
+            
         }
         
         delegate.getDataSuccess(items)

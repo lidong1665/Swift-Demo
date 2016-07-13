@@ -34,14 +34,14 @@ class UIVIewViewController: UIViewController {
         switch button.tag {
             
         case 1:
-            let ve = UIBUttonViewController()
+            let ve = DemoViewController()
             
             self.navigationController?.pushViewController(ve, animated: true)
             print("21")
            
             break
         case 2:
-            Util.log("lable", message: "第一个按钮")
+            Util.log_s("lable", message: "第一个按钮")
             Util.openNewViewController("Main", vc: self)
             break
         case 3:

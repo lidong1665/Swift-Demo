@@ -33,10 +33,6 @@ class ThridViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         tb_data_list.delegate = self
     }
     
-    //返回按钮点击响应
-    func backToPrevious(){
-        self.navigationController?.popViewControllerAnimated(true)
-    }
     
     //初始化数据的方法
     func initData() {

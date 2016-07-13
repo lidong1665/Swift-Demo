@@ -11,6 +11,8 @@ import Foundation
 class NetController: UIViewController {
     
     
+    @IBOutlet weak var btn_web_view: UIButton!
+    @IBOutlet weak var btnUpload: UIButton!
     @IBOutlet weak var btnPost: UIButton!
     @IBOutlet weak var btnGet: UIButton!
     override func viewDidLoad() {
@@ -20,6 +22,8 @@ class NetController: UIViewController {
         
         btnPost.addTarget(self, action:#selector(NetController.OnClickBtn(_:)), forControlEvents: .TouchDown)
         btnGet.addTarget(self, action:#selector(NetController.OnClickBtn(_:)), forControlEvents: .TouchDown)
+        
+        btnUpload.addTarget(self, action:#selector(NetController.OnClickBtn(_:)), forControlEvents: .TouchDown)
     }
     
     
@@ -29,15 +33,21 @@ class NetController: UIViewController {
      - parameter button: <#button description#>
      */
     func OnClickBtn(button:UIButton){
+        let util:Util = Util()
+
         
         switch button.tag {
             
         case 10:
-            let ve = ZGJMDemoMVVM()
+            let ve = NetBlockDemo()
             self.navigationController?.pushViewController(ve, animated: true)
             break
         case 20:
-            Util.openNewViewController("Four", vc: self)
+            util.presentNavController_s("Four", title: "POST请求", nowViewController: self)
+            break
+            
+        case 30:
+            util.presentNavController_s("Second", title: "图片上传请求", nowViewController: self)
             break
         default:
             break

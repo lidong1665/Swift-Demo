@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class SecondViewController: BaseViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ResponseResultDelegate{
     
     @IBOutlet weak var lb_title: UILabel!
     @IBOutlet weak var btn_back: UIButton!
@@ -17,6 +17,9 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     @IBOutlet weak var btn_login: UIButton!
     //用户名
     @IBOutlet weak var tv_username: UITextField!
+    
+    let aFUtils = AFNetWorkingUtil.sharedInstance
+
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -28,6 +31,7 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         self.lb_title.text = "用户登录"
         // 为按钮添加事件
         self.btn_back.addTarget(self, action:#selector(SecondViewController.OnClickBtn(_:)), forControlEvents: UIControlEvents.TouchDown)
+        aFUtils.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -70,12 +74,32 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         imageview.image = gotImage
         self.view.addSubview(imageview)
         print(info);
-        
+        let data:NSData = UIImageJPEGRepresentation(gotImage, 0.3)!
+        let url = "http://192.168.1.12:8080/LoginDemo/upload";
+        let pa:Dictionary<String,String> = ["desciption":"iiiiiiii"]
+//        aFUtils.uploadFile(url, params: pa, fileData: data, fileName: "00000");
+        var fs:Array<NSData> = [NSData]()
+        var fileNames:Array<String> = [String]()
+        fs.append(data)
+        fs.append(data)
+        fileNames.append("000000")
+        fileNames.append("222222")
+        aFUtils.uploadManyFile(url, params: pa, fileData: fs, fileName: fileNames)
+        print("----info------")
         self.dismissViewControllerAnimated(true, completion: nil);
     }
     
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-       print(picker)
+        print("----------")
+        print(picker)
+        print("00000000000")
+    }
+    
+    func responseError(responseObj: AnyObject?) {
+        print("服务器不能接收，图片太大了")
+    }
+    func responseSuccess(responseObj: AnyObject?) {
+        print("服务器接收成功，哈哈哈")
     }
 }

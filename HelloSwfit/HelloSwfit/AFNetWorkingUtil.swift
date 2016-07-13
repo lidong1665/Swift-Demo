@@ -46,7 +46,7 @@ class AFNetWorkingUtil {
      
      - returns: URL
      */
-     func getBaseUrl(baseUrl:String) ->String{
+     func getBaseUrl() ->String{
     
         return BASE_URL
      }
@@ -59,7 +59,7 @@ class AFNetWorkingUtil {
      */
     func post(action:String,params:Dictionary<String,String>){
         
-        _sessionManager.POST(getBaseUrl(BASE_URL)+action, parameters: params, success: { (operation:NSURLSessionDataTask?,
+        _sessionManager.POST(getBaseUrl()+action, parameters: params, success: { (operation:NSURLSessionDataTask?,
             responseObj:AnyObject?) in
                 print(responseObj)
             self.delegate?.responseSuccess(responseObj)
@@ -76,7 +76,7 @@ class AFNetWorkingUtil {
      - parameter params: 请求参数
      */
      func get(action:String,params:Dictionary<String,String>){
-        _sessionManager.GET(getBaseUrl(BASE_URL)+action, parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
+        _sessionManager.GET(getBaseUrl()+action, parameters: params, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
             print(responseObj)
             self.delegate?.responseSuccess(responseObj)
         }) { (operation:NSURLSessionDataTask? ,error:NSError) in
@@ -85,5 +85,67 @@ class AFNetWorkingUtil {
         }
     
     }
+    
 
+    /**
+     上传单张图片
+     
+     - parameter action:   请求的action
+     - parameter params:   参数
+     - parameter fileData: 文件
+     - parameter fileName: 文件名称
+     */
+    func uploadFile(action:String,params:Dictionary<String,String>
+        ,fileData:NSData,fileName:String) {
+        
+        _sessionManager.POST(action, parameters:
+            
+            params, constructingBodyWithBlock: { (formdata:AFMultipartFormData?) in
+            //在这里构造图片
+                formdata!.appendPartWithFileData(fileData, name:"file", fileName:fileName, mimeType:"image/jpg")
+                
+            }, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
+                print(responseObj)
+                self.delegate?.responseSuccess(responseObj)
+                
+        }) { (operation:NSURLSessionDataTask?,error:NSError?) in
+                print(error)
+            self.delegate?.responseError(error)
+        }
+    }
+
+
+    
+    /**
+     上传多张图片
+     
+     - parameter action:   请求的action
+     - parameter params:   参数
+     - parameter fileData: 文件
+     - parameter fileName: 文件名称
+     */
+    func uploadManyFile(action:String,params:Dictionary<String,String>
+        ,fileData:Array<NSData>,fileName:Array<String>) {
+        
+        _sessionManager.POST(action, parameters:
+            
+            params, constructingBodyWithBlock: { (formdata:AFMultipartFormData?) in
+                //在这里构造图片
+                for(var i = 0 ;i < fileData.count; i = i+1){
+                formdata!.appendPartWithFileData(fileData[i], name:"file", fileName:fileName[i], mimeType:"image/jpg")
+                }
+                
+            }, success: { (operation:NSURLSessionDataTask?, responseObj:AnyObject?) in
+                print(responseObj)
+                self.delegate?.responseSuccess(responseObj)
+                
+        }) { (operation:NSURLSessionDataTask?,error:NSError?) in
+            print(error)
+            self.delegate?.responseError(error)
+        }
+    }
+    
+
+    
+    
 }
